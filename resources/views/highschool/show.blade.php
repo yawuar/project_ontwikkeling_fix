@@ -26,7 +26,7 @@
                     </div>
 
                     <div class="panel-heading">
-                        <input class="form-control" placeholder="Hogeschool url" type="text" name="abbreviation" value="{{ $school->abbreviation or '' }}" required>
+                        <input class="form-control" placeholder="Hogeschool afkorting" type="text" name="abbreviation" value="{{ $school->abbreviation or '' }}" required>
                     </div>
 
                 </div>

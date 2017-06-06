@@ -96,6 +96,12 @@ Route::get('/cms/studeren/scholen/editor/{id}', 'HighSchoolController@show');
 Route::post('/cms/studeren/scholen/study-post', 'HighSchoolController@store');
 Route::delete('/cms/studeren/scholen/study-delete/{id}', 'HighSchoolController@destroy');
 
+// faculties
+Route::get('/cms/studeren/faculties/', 'FacultyController@index');
+Route::get('/cms/studeren/faculties/editor/{id}', 'FacultyController@show');
+Route::post('/cms/studeren/faculties/study-post', 'FacultyController@store');
+Route::delete('/cms/studeren/faculties/study-delete/{id}', 'FacultyController@destroy');
+
 //API voor game
 Route::get('/posttest', function (Request $request) {
     if ($request->token == '7D9wC3K9Cjna0NGVOXJl') {
