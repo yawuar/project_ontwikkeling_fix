@@ -21,7 +21,8 @@ class CreateArticles extends Migration
             $table->longText('content');
             $table->string('picture_url');
             $table->string('is_testimonial');
-            $table->integer('is_accepted');
+            $table->integer('is_accepted')->default(0);
+            $table->date('published_on')->default(null);
             $table->timestamps();
         });
     }

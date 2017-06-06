@@ -8,7 +8,7 @@
     </video>
     <div class="header-content">
       <div class="header-content-inner">
-        <h1 id="homeHeading">Ontdek Antwerpen</h1>
+        <h1 id="homeHeading">{!! $tagline !!}</h1>
       </div>
     </div>
     <div class="box"></div>
@@ -22,9 +22,7 @@
           <h2 class="section-heading">Wat doen we?</h2>
         </div>
         <div class="col-xs-12 col-sm-8">
-          <p class="text-faded">Lorem ipsum dolor sit amet, consectetur <span>adipiscing</span> elit. Cras id aliquam est. Praesent <span>accumsan</span> aliquet ligula, vel porta ipsum viverra accumsan. Nulla at nunc vitae mi pulvinar tempus. Aliquam iaculis, metus sed commodo
-            sodales, dolor turpis luctus nisl, non tincidunt tellus leo quis sem. Suspendisse ac ligula nec sem pellentesque lobortis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aliquam et nulla cursus, venenatis
-            tellus eu, eleifend ex.</p>
+          <p class="text-faded">{!! $introtekst !!}</p>
         </div>
       </div>
     </div>

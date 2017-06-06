@@ -1,4 +1,4 @@
-@extends('layouts.dashboard')
+@extends('layouts.cms')
 
 @section('content')
 <div class="container">
@@ -7,7 +7,13 @@
 
             <a href="cms/articles">
                 <div class="panel panel-default">
-                    <div class="panel-heading">Articles</div>
+                    <div class="panel-heading">Artikelen</div>
+                </div>
+            </a>
+
+            <a href="cms/articles/gate15">
+                <div class="panel panel-default">
+                    <div class="panel-heading">Gate 15 Artikelen</div>
                 </div>
             </a>
 
@@ -19,16 +25,10 @@
 
             <a href="cms/users">
                 <div class="panel panel-default">
-                    <div class="panel-heading">Users</div>
+                    <div class="panel-heading">Gebruikers</div>
                 </div>
             </a>
-
-            <a href="cms/contactinfo">
-                <div class="panel panel-default">
-                    <div class="panel-heading">Contactinfo</div>
-                </div>
-            </a>
-
+            
         </div>
     </div>
 </div>

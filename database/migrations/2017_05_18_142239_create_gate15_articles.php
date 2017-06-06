@@ -22,6 +22,7 @@ class CreateGate15Articles extends Migration
           $table->date('published_on');
           $table->longText('content');
           $table->integer('is_accepted')->default(0);
+          $table->integer('is_deleted')->default(0);
           $table->string('tags');
           $table->timestamps();
         });

@@ -18,9 +18,7 @@
           <h2 class="section-heading">De stad Antwerpen</h2>
         </div>
         <div class="col-xs-12 col-sm-8">
-          <p class="text-faded">Lorem ipsum dolor sit amet, consectetur <span>adipiscing</span> elit. Cras id aliquam est. Praesent <span>accumsan</span> aliquet ligula, vel porta ipsum viverra accumsan. Nulla at nunc vitae mi pulvinar tempus. Aliquam iaculis, metus sed commodo
-            sodales, dolor turpis luctus nisl, non tincidunt tellus leo quis sem. Suspendisse ac ligula nec sem pellentesque lobortis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aliquam et nulla cursus, venenatis
-            tellus eu, eleifend ex.</p>
+          <p class="text-faded">{!! $introtekst !!}</p>
         </div>
       </div>
     </div>
@@ -29,22 +27,23 @@
   <!-- Artikelen -->
   <section id="events">
     <div class="container">
-      <div class="row">
-          <div class="col-md-6">
-              <div style="background-image: url({{ asset('images/events/stadsfotograaf.jpg') }})" class="event">
-                <div class="bv-info">
-                  <span class="date">10 maart 2017</span>
-                  <h2>Stadsfotograaf</h2>
+      @foreach($locations as $location)
+        <div class="row">
+            <div class="col-md-6">
+                <div style="background-image: url('{{ asset($location['picture_url']) }}')" class="event">
+                  <div class="bv-info">
+                    <h2>{{$location['name']}}</h2>
+                  </div>
                 </div>
-              </div>
-              <div class="dummy"></div>
-          </div>
-          <div class="col-md-6">
-            <div class="text">
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras id aliquam est. Praesent accumsan aliquet ligula, vel porta ipsum viverra accumsan. Nulla at nunc vitae mi pulvinar tempus. Aliquam iaculis, metus sed commodo sodales, dolor turpis luctus nisl, non tincidunt tellus leo quis sem. Suspendisse ac ligula nec sem pellentesque lobortis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aliquam et nulla cursus, venenatis tellus eu, eleifend ex.</p>
+                <div class="dummy"></div>
             </div>
-          </div>
-      </div>
+            <div class="col-md-6">
+              <div class="text">
+                <p>{!! $location['content'] !!}</p>
+              </div>
+            </div>
+        </div>
+      @endforeach
     </div>
   </section>
 

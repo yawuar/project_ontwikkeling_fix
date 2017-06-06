@@ -39,51 +39,60 @@ Route::get('/testimonials/randomTestimonial', ['uses' => 'TestimonialController@
 Route::get('/testimonials/filter/{type}', ['uses' => 'TestimonialController@getDataByType']);
 
 // Only routes which are authenticated can be used
-Route::group(['middleware' => 'auth'], function() {
-  Route::get('/dashboard', ['uses' => 'DashboardController@index']);
-  Route::post('/dashboard/change', ['uses' => 'DashboardController@change']);
-});
-
-Route::get('/articles', function () {
-
-    $articles = Article::get();
-
-    return view('articles', compact('articles'));
-});
-Route::get('/articles/{article}', ['uses' => 'ArticleController@detail']);
-//Auth::routes();
-
-Route::get('/home', 'PageController@home');
-
-//CMS Routes
-Route::get('/cms', function() {
-
-    return view('cms/index');
-});
-
-Route::get('/cms/articles', function() {
-
-    $articles = Article::get();
-
-    return view('cms/articles', compact('articles'));
-});
-
-Route::get('/cms/articles/{id}', function ($id) {
-    if ($id == "new") {
-        return view('cms/articledetail');
-    } else {
-        $article = Article::find($id);
-
-        return view('cms/articledetail', compact('article'));
-    }
-});
-
-
-
-//POST & GET Routes
-Route::post('/post-article', 'Controller@postArticle');
+// Route::group(['middleware' => 'auth'], function() {
+//   Route::get('/dashboard', ['uses' => 'DashboardController@index']);
+//   Route::post('/dashboard/change', ['uses' => 'DashboardController@change']);
+// });
 
 // Route fot authentication
 Auth::routes();
-
 Route::get('/logout' , 'Auth\LoginController@logout');
+
+// routes Adriaan
+
+//CMS Routes
+Route::get('/cms', 'cmsController@cmsIndex');
+
+//articles
+Route::get('/cms/articles', 'cmsController@getArticles');
+Route::get('/cms/articles/editor/{id}', 'cmsController@getOneArticle');
+Route::get('/cms/articles/gate15', 'cmsController@gate15Articles');
+Route::get('/cms/articles/editor/gate15/{id}', 'cmsController@getOneGate15Article');
+
+Route::post('/cms/article-post', 'cmsController@articlePost');
+Route::post('/cms/article-delete', 'cmsController@articleDelete');
+Route::post('/cms/gate15-article-delete', 'cmsController@gate15ArticleDelete');
+Route::post('/cms/article-toggle-accept', 'cmsController@articleToggleAccept');
+
+//stad (intro & locations)
+Route::get('cms/stad', 'cmsController@stad');
+Route::get('/cms/location/editor/{id}', 'cmsController@getOneLocation');
+Route::post('/cms/stad-introtekst', 'cmsController@stadIntrotekstPost');
+Route::post('/cms/location-post', 'cmsController@locationPost');
+Route::post('/cms/location-delete', 'cmsController@locationDelete');
+
+//homepage
+Route::get('/cms/homepage', 'cmsController@homepage');
+Route::post('/cms/homepage-introtekst', 'cmsController@homepageIntrotekstPost');
+Route::post('/cms/homepage-tagline', 'cmsController@homepageTaglinePost');
+
+//gebruikers
+Route::get('/cms/gebruikers','cmsController@getUsers');
+Route::get('/cms/gebruikers/new','cmsController@getUsersNew');
+Route::post('/cms/changeUserPermissions', 'cmsController@changeUserPermissions');
+Route::post('/cms/addNewUser', 'cmsController@addNewUser');
+
+
+//post test
+Route::get('/posttest', function (Request $request) {
+    if ($request->token == '7D9wC3K9Cjna0NGVOXJl') {
+        return "OK";
+        /*return response()->json([
+            'name' => 'Adriaan',
+            'state' => 'CA'
+        ]);*/
+    } else {
+        return "INCORRECT TOKEN";
+    }
+
+});
