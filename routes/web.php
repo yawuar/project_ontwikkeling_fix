@@ -82,11 +82,19 @@ Route::get('/cms/gebruikers/new','cmsController@getUsersNew');
 Route::post('/cms/changeUserPermissions', 'cmsController@changeUserPermissions');
 Route::post('/cms/addNewUser', 'cmsController@addNewUser');
 
-// studeren
+/** studeren **/
+
+// opleidingen
 Route::get('/cms/studeren', 'StudyController@index');
 Route::get('/cms/studeren/editor/{id}', 'StudyController@show');
 Route::post('/cms/studeren/study-post', 'StudyController@store');
 Route::delete('/cms/studeren/study-delete/{id}', 'StudyController@destroy');
+
+// scholen
+Route::get('/cms/studeren/scholen/', 'HighSchoolController@index');
+Route::get('/cms/studeren/scholen/editor/{id}', 'HighSchoolController@show');
+Route::post('/cms/studeren/scholen/study-post', 'HighSchoolController@store');
+Route::delete('/cms/studeren/scholen/study-delete/{id}', 'HighSchoolController@destroy');
 
 //API voor game
 Route::get('/posttest', function (Request $request) {
