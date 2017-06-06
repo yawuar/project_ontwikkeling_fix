@@ -11,7 +11,7 @@
 </header>
 
 <div id="random">
-  <p>Geef een willekeurige evenement</p>
+  <p>Geef een willekeurig evenement</p>
   <a href="/events/random/event"></a>
 </div>
 
