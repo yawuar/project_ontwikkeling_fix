@@ -71,7 +71,7 @@
   <div class="dummy"></div>
   <!-- Scripts -->
   <footer>
-    <p>&copy; 2017 Antwerpen.be | Privacy &amp; gebruiksvoorwaarden <a href="./dashboard">admin</a></p>
+    <p>&copy; 2017 Antwerpen.be | Privacy &amp; gebruiksvoorwaarden <a href="/cms">admin</a></p>
   </footer>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
