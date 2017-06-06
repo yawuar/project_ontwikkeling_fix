@@ -4,6 +4,7 @@
 <div class="container">
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
+            <button type="button" class="btn btn-default" onclick="window.location='{{ url('cms') }}'">< Terug</button><br/><br/>
 
             @if(!$addingUser)
                 <button type="button" class="btn btn-default" onclick="window.location='{{ url('cms/gebruikers/new') }}'">Nieuwe gebruiker aanmaken</button>
