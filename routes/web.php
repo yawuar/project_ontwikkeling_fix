@@ -82,6 +82,11 @@ Route::get('/cms/gebruikers/new','cmsController@getUsersNew');
 Route::post('/cms/changeUserPermissions', 'cmsController@changeUserPermissions');
 Route::post('/cms/addNewUser', 'cmsController@addNewUser');
 
+// studeren
+Route::get('/cms/studeren', 'StudyController@index');
+Route::get('/cms/studeren/editor/{id}', 'StudyController@show');
+Route::post('/cms/studeren/study-post', 'StudyController@store');
+Route::delete('/cms/studeren/study-delete/{id}', 'StudyController@destroy');
 
 //API voor game
 Route::get('/posttest', function (Request $request) {
