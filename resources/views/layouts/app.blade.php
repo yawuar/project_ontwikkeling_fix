@@ -57,11 +57,11 @@
       </div>
       <div id="navbar" class="navbar-collapse collapse">
         <ul class="nav navbar-nav navbar-right">
-          <li><a class="{{ Request::is('/') ? 'active' : '' }}" href="/">Home</a></li>
-          <li><a class="{{ Request::is('city') ? 'active' : '' }}" href="/city">Stad</a></li>
-          <li><a class="{{ Request::is('events') ? 'active' : '' }}" href="/events">Events</a></li>
-          <li><a class="{{ Request::is('studeren') ? 'active' : '' }}" href="/studeren">Studeren</a></li>
-          <li><a class="{{ Request::is('testimonials') ? 'active' : '' }}" href="/testimonials">Testimonials</a></li>
+          <li><a class="{{ Request::is('/') ? 'active' : '' }}" href="{{ url('/') }}">Home</a></li>
+          <li><a class="{{ Request::is('city') ? 'active' : '' }}" href="{{ url('/city') }}">Stad</a></li>
+          <li><a class="{{ Request::is('events') ? 'active' : '' }}" href="{{ url('/events') }}">Events</a></li>
+          <li><a class="{{ Request::is('studeren') ? 'active' : '' }}" href="{{ url('/studeren') }}">Studeren</a></li>
+          <li><a class="{{ Request::is('testimonials') ? 'active' : '' }}" href="{{ url('/testimonials') }}">Artikelen</a></li>
         </ul>
       </div><!--/.nav-collapse -->
     </div>
