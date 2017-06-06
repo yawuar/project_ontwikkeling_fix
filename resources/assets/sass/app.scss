@@ -1,0 +1,1193 @@
+@import "compass/css3";
+$red: #cb0333;
+$blue: #007fa3;
+$grey: #8d9092;
+$antwerp: 'Antwerpen';
+$sun_antwerp: 'Sun_antwerpen';
+$break-medium: 768px;
+$break-large: 1200px;
+@font-face {
+  font-family: $antwerp;
+  src: url('../fonts/antwerpen/Antwerpen-Regular.eot');
+  /* IE9 Compat Modes */
+  src:url('../fonts/antwerpen/Antwerpen-Regular.eot?#iefix') format('embedded-opentype'),
+  /* IE6-IE8 */
+  url('../fonts/antwerpen/Antwerpen-Regular.woff') format('woff'),
+  /* Pretty Modern Browsers */
+  url('../fonts/antwerpen/Antwerpen-Regular.ttf') format('truetype'),
+  /* Safari, Android, iOS */
+  url('../fonts/antwerpen/Antwerpen-Regular.svg#svgFontName') format('svg');
+  /* Legacy iOS */
+}
+@font-face {
+  font-family: $sun_antwerp;
+  src: url('../fonts/sun_antwerpen/500/SunAntwerpen_500.eot');
+  /* IE9 Compat Modes */
+  src:url('../fonts/sun_antwerpen/500/SunAntwerpen_500.eot?#iefix') format('embedded-opentype'),
+  /* IE6-IE8 */
+  url('../fonts/sun_antwerpen/500/SunAntwerpen_500.woff') format('woff'),
+  /* Pretty Modern Browsers */
+  url( '../fonts/sun_antwerpen/500/SunAntwerpen_500.svg#svgFontName') format('svg');
+  /* Legacy iOS */
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  border-radius: 0 !important;
+}
+
+body,
+html {
+  height: 100%;
+  width: 100%;
+  // overflow-x: hidden;
+}
+
+body {
+  display: block;
+}
+
+h1,
+h2 {
+  color: white;
+  font-family: $antwerp;
+  margin: 0;
+}
+
+h2 {
+  font-size: 28px;
+}
+
+p {
+  font-family: $sun_antwerp;
+  font-size: 18px;
+  line-height: 25.2px;
+  color: white;
+}
+.container {
+  @media screen and (min-width: $break-large) {
+    width: 1000px;
+  }
+}
+
+.col-xs-12 {
+  padding: 0 50px;
+}
+
+.dummy {
+  display: block;
+  content: "";
+  clear: both;
+}
+
+.activeEvent, .activeTestimonial {
+  background-color: $blue;
+}
+
+figure {
+  .element {
+  }
+}
+
+.navbar-fixed-top {
+  top: 15px;
+}
+
+.active {
+  top: 0;
+  background-color: #ffffff !important;
+  @include box-shadow(0px 0.5px 0px $grey);
+  .container {
+    #navbar {
+      ul {
+        li {
+          a {
+            padding: 15px 15px;
+            color: black !important;
+
+            @media screen and (min-width: $break-medium) {
+              padding: 28px 15px;
+            }
+          }
+        }
+      }
+    }
+  }
+  .navbar-header {
+    button {
+      height: 75px;
+      margin-top: 0;
+      margin-bottom: 0;
+      span {
+        background-color: black !important;
+      }
+    }
+  }
+}
+
+.navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
+  background: none;
+}
+
+.navbar-default .navbar-collapse, .navbar-default .navbar-form {
+    border: none;
+    @include box-shadow(0px 0px);
+    background-color: white;
+
+    @media screen and (min-width: $break-medium) {
+      background: none;
+    }
+}
+
+  .navbar-default {
+    background: none;
+    border: none;
+    height: 75px;
+
+    .logo {
+      display: block;
+      background-image: url('../images/a_logo.jpg');
+      background-repeat: no-repeat;
+      @include background-size(100%);
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 75px;
+      height: 75px;
+    }
+
+    .container {
+      .navbar-header {
+        button {
+          border: none;
+
+          span {
+            background-color: white;
+
+            @media screen and (min-width: $break-medium) {
+              background: none;
+            }
+          }
+        }
+      }
+
+      #navbar {
+        .navbar-right {
+          @media screen and (min-width: $break-medium) {
+            margin-right: 0;
+          }
+        }
+        ul {
+          li {
+            padding-right: 25px;
+            border-bottom: 1px solid lighten($grey, 25%);
+            text-align: right;
+
+            @media screen and (min-width: $break-medium) {
+              border: none;
+            }
+            a {
+              font-family: $sun_antwerp;
+              font-size: 16px;
+              text-transform: uppercase;
+              color: black;
+
+              @media screen and (min-width: $break-medium) {
+                color: white;
+              }
+              &.active {
+                background-color: transparent !important;
+                border-bottom: none;
+                text-decoration: underline;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+// video
+#landingvideo {
+  position: relative;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  width: auto;
+  height: 500px;
+  z-index: -100;
+  background-size: cover;
+  transition: 1s opacity;
+  overflow-x: hidden;
+
+  video {
+    height: auto;
+
+    @media screen and (min-width: $break-large) {
+      height: auto;
+      width: 100%;
+    }
+  }
+}
+
+header {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  min-height: auto;
+  @include background-size(cover);
+  background-position: center;
+  background-image: url('../images/bg.jpg');
+  text-align: center;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @media screen and (min-width: $break-medium) {
+    min-height: 100%;
+  }
+
+  .box {
+    position: absolute;
+    right: 15%;
+    top: 0;
+    background-color: $red;
+    mix-blend-mode: overlay;
+    width: 26.5%;
+    height: 100%;
+    z-index: 0;
+  }
+
+  .header-content {
+    position: relative;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    z-index: 1;
+    top: 70%;
+    @media screen and (min-width: $break-medium) {
+      top: 70%;
+    }
+
+    .header-content-inner {
+      @media screen and (min-width: $break-medium) {
+        max-width: 1000px;
+        margin: 0 auto;
+      }
+
+      h1 {
+        margin-top: 0;
+        margin-bottom: 0;
+        font-size: 30px;
+        @include text-shadow(2px 2px rgba(203, 3, 51, 0.75));
+        @media screen and (min-width: $break-medium) {
+          font-size: 50px;
+          letter-spacing: 5px;
+        }
+      }
+
+      hr {
+        margin: 30px auto;
+      }
+
+      p {
+        font-weight: 300;
+        color: white;
+        font-size: 16px;
+        margin-bottom: 50px;
+        @media screen and (min-width: $break-medium) {
+          font-size: 18px;
+          max-width: 80%;
+          margin-left: auto;
+          margin-right: auto;
+        }
+      }
+    }
+  }
+
+  #search {
+    position: absolute;
+    left: 50%;
+    @include transform(translateX(-50%));
+    top: (100%/3*2);
+    width: 500px;
+
+    .input-group {
+      margin-left: 50%;
+      @include transform(translateX(-50%));
+    }
+
+    .input-group-btn,
+    input {
+      height: 50px;
+      border: none;
+    }
+
+    input {
+      @include input-placeholder {
+        color: $red;
+        padding-left: 25px;
+        font-style: italic;
+        font-size: 16px;
+      }
+    }
+
+    .input-group-btn {
+      .btn {
+        background-color: white;
+        border: none;
+        height: 100%;
+
+        .glyphicon {
+          color: black;
+        }
+      }
+    }
+  }
+}
+
+.col-xs-12 {
+  // background-color: red;
+  padding: 0 25px;
+  @media screen and (min-width: $break-medium) {
+    padding: 0;
+  }
+}
+
+#articles {
+  .container {
+    .row {
+      .col-xs-12 {
+        // background-color: red;
+        //padding: 0 25px;
+        @media screen and (min-width: $break-medium) {
+          //padding: 0;
+        }
+
+        &:nth-child(2) {
+          //float: right;
+          .person {
+            float: right;
+
+            .bv-info {
+              left: -11%;
+
+              @media screen and (min-width: $break-medium) {
+                left: -25%;
+              }
+
+              .date {
+                text-align: left;
+              }
+
+              h2 {
+                background-color: $grey;
+              }
+            }
+          }
+
+          p {
+            float: right;
+          }
+
+          a {
+            width: 80%;
+            float: right;
+
+            @media screen and (min-width: $break-medium) {
+              width: 50%;
+            }
+          }
+        }
+      }
+      p {
+        width: 80%;
+        font-size: 20px;
+        line-height: 24px;
+
+        @media screen and (min-width: $break-medium) {
+          width: 50%;
+        }
+      }
+
+      a {
+        display: inline-block;
+        margin-bottom: 75px;
+        text-decoration: none;
+      }
+      .person {
+        position: relative;
+        background-size: cover;
+        width: 90%;
+        height: 200px;
+        margin-bottom: 75px;
+
+        @media screen and (min-width: $break-medium) {
+          height: 450px;
+          width: 80%;
+        }
+
+        .bv-info {
+          position: absolute;
+          right: -11%;
+          bottom: -15%;
+          width: 65%;
+          height: 40%;
+
+          @media screen and (min-width: $break-medium) {
+            width: 35%;
+            right: -25%;
+            width: 35%;
+          }
+
+          .date {
+            font-family: $sun_antwerp;
+            color: $grey;
+            display: block;
+            text-align: right;
+          }
+
+          h2 {
+            font-size: 18px;
+            background-color: $blue;
+            @include opacity(0.7);
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+
+            @media screen and (min-width: $break-medium) {
+              font-size: 18px;
+            }
+          }
+        }
+      }
+
+      p {
+        color: black;
+      }
+    }
+  }
+}
+
+.bg-primary {
+  background-color: white;
+  margin: 100px 0;
+  .container {
+    .row {
+      @media screen and (min-width: $break-medium) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      h2, p {
+        color: black;
+      }
+
+      h2 {
+        color: $blue;
+        font-size: 32px;
+        margin-bottom: 25px;
+        @media screen and (min-width: $break-medium) {
+          margin-right: 25px;
+          font-size: 40px;
+        }
+      }
+
+      .text-faded {
+        span {
+          color: $red;
+        }
+      }
+    }
+  }
+}
+
+#mas {
+  position: relative;
+  background-image: url('../images/bollekesfeest.png');
+  @include background-size(cover);
+  background-position: center 30%;
+  display: block;
+  width: 100%;
+  height: 350px;
+
+  @media screen and (min-width: $break-medium) {
+    height: 60%;
+  }
+
+  .mas-box {
+    position: absolute;
+    left: 9%;
+    top: 0;
+    background-color: $blue;
+    mix-blend-mode: overlay;
+    width: 20%;
+    height: 100%;
+    z-index: 0;
+  }
+
+  .info {
+    position: absolute;
+    bottom: 30%;
+    left: 20%;
+    h1 {
+      font-size: 20px;
+      letter-spacing: 1px;
+
+      @media screen and (min-width: $break-medium) {
+        font-size: 40px;
+        letter-spacing: 3px;
+      }
+    }
+    span {
+      display: block;
+      color: white;
+      font-size: 16px;
+      margin-top: 10px;
+    }
+  }
+}
+
+@media screen and (min-width: $break-medium) {
+  .col-sm-4 {
+    width: auto;
+    padding: 0;
+  }
+}
+
+#article, #schoolOpleiding_detail, #event_detail {
+  margin: 150px 0 50px 0;
+  .container {
+    padding-left: 0;
+    padding-right: 0;
+    nav {
+      ul {
+        li {
+          font-size: 400;
+          list-style: none;
+          display: inline-block;
+          a {
+            color: black;
+            &:hover {
+              text-decoration: none;
+              color: $blue;
+            }
+          }
+        }
+      }
+    }
+    .row {
+      margin-right: 0;
+      margin-left: 0;
+      .person {
+        position: relative;
+        background-size: cover;
+        width: 90%;
+        height: 200px;
+
+        @media screen and (min-width: $break-medium) {
+          height: 450px;
+          width: 80%;
+        }
+
+        .bv-info {
+          position: absolute;
+          right: -11%;
+          bottom: -15%;
+          width: 65%;
+          height: 40%;
+
+          @media screen and (min-width: $break-medium) {
+            width: 35%;
+            right: -25%;
+            width: 35%;
+          }
+
+          .date {
+            font-family: $sun_antwerp;
+            color: $grey;
+            display: block;
+            text-align: right;
+          }
+
+          h2 {
+            font-size: 18px;
+            background-color: $blue;
+            @include opacity(0.7);
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+
+            @media screen and (min-width: $break-medium) {
+              font-size: 20px;
+            }
+          }
+        }
+      }
+
+      .text {
+        margin-top: 100px;
+
+        h3 {
+          font-family: $antwerp;
+          font-size: 44px;
+          margin: 0;
+        }
+
+        .col-xs-10 {
+          padding-left: 0;
+        }
+      }
+
+      p {
+        color: black;
+        font-size: 18px;
+        line-height: 25.2px;
+        width: 80%;
+
+        &:first-child {
+          font-size: 16px;
+          line-height: 22.4px;
+          color: $grey;
+        }
+
+        strong, a {
+          color: $blue;
+        }
+      }
+
+      ul {
+        font-family: $sun_antwerp;
+        font-size: 16px;
+        margin-left: 50px;
+        li {
+          margin-bottom: 5px;
+        }
+      }
+    }
+  }
+}
+
+footer {
+  background-color: black;
+
+  p {
+    font-size: 16px;
+    text-align: center;
+    margin: 0;
+    color: $grey;
+    padding: 20px;
+  }
+}
+
+// City page
+.city {
+  background-image: url('../images/city.jpg');
+  background-position: center 85%;
+  height: 50%;
+
+  @media screen and (min-width: $break-medium) {
+    min-height: 50%;
+  }
+}
+
+#events {
+  margin-bottom: 50px;
+    .col-xs-12:nth-child(even) {
+      .event {
+        margin-left: 0;
+        @media screen and (min-width: $break-medium) {
+          margin-left: 15%;
+        }
+      }
+    }
+
+    .text {
+      margin-top: 25px;
+      p {
+        color: black;
+      }
+    }
+    .col-md-6 {
+      margin-bottom: 50px;
+    }
+    .event {
+      position: relative;
+      background-size: cover;
+      width: 75%;
+      height: 250px;
+      margin-bottom: 100px;
+
+      @media screen and (min-width: $break-medium) {
+        width: 300px;
+        height: 300px;
+      }
+
+      .bv-info {
+        position: absolute;
+        right: -30%;
+        bottom: -13%;
+        width: 60%;
+        height: 40%;
+
+        @media screen and (min-width: $break-medium) {
+          right: -40%;
+          width: 80%;
+        }
+
+        .date {
+          font-family: $sun_antwerp;
+          color: $grey;
+          display: block;
+          text-align: right;
+        }
+
+        h2 {
+          font-size: 17px;
+          letter-spacing: 1px;
+          background-color: $blue;
+          @include opacity(0.7);
+          height: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          @media screen and (min-width: $break-medium) {
+            font-size: 22px;
+          }
+        }
+      }
+    }
+}
+
+// School page
+.school {
+  background-image: url('../images/school.jpg');
+  height: 50%;
+
+  @media screen and (min-width: $break-medium) {
+    min-height: 50%;
+  }
+}
+
+// random btn
+#random {
+  position: absolute;
+  margin-top: 25px;
+  right: 25px;
+  background-image: url('../images/random.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 200px 0;
+  width: 250px;
+  height: 40px;
+  p {
+    color: black;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 14px;
+  }
+  a {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+#school, #school_detail {
+  margin-bottom: 50px;
+  .container {
+    padding-left: 0;
+    padding-right: 0;
+    .row {
+      @media screen and (min-width: $break-medium) {
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .col-md-3 {
+        height: 100%;
+        margin-bottom: 25px;
+        .shadow {
+          cursor: pointer;
+          @include box-shadow(1px 1px 1px 0px $grey);
+          display: block;
+        }
+        @media screen and (min-width: $break-medium) {
+          width: 33.33%;
+          padding-left: 15px;
+          padding-right: 15px;
+        }
+        .faculty_photo {
+          height: 250px;
+          position: rellative;
+          z-index: 0;
+          .heart, .fullHeart {
+            background-size: contain;
+            background-repeat: no-repeat;
+            position: absolute;
+            right: 30px;
+            top: 15px;
+            width: 25px;
+            height: 25px;
+            z-index: 1;
+            cursor: pointer;
+          }
+
+          .heart {
+            background-image: url("../images/borderHeart.svg");
+          }
+
+          .fullHeart {
+            background-image: url("../images/heart.svg");
+          }
+
+          .f_photo {
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: top center;
+            width: 100%;
+            height: 100%;
+          }
+        }
+
+        .text {
+          text-align: center;
+          height: 100px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          p {
+            width: 75%;
+            a {
+              text-decoration: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.testimonial {
+  background-image: url('../images/testimonials.jpg');
+  height: 50%;
+
+  @media screen and (min-width: $break-medium) {
+    min-height: 50%;
+  }
+}
+
+#testimonials, #events_gate15 {
+  .container {
+    padding: 0 0;
+    .row {
+      [class*='col-'] {
+        padding-left: 15px;
+        padding-right: 15px;
+        margin-bottom: 75px;
+        &:nth-child(even) {
+          h2 {
+            background-color: $grey !important;
+          }
+        }
+
+        .photo {
+          position: relative;
+          background-size: cover;
+          width: 75%;
+          height: 225px;
+          display: block;
+
+          .bv-info {
+            position: absolute;
+            right: -30%;
+            bottom: -19%;
+            width: 60%;
+            height: 40%;
+
+            @media screen and (min-width: $break-medium) {
+              right: -35%;
+              width: 70%;
+            }
+
+            h2 {
+              font-size: 12px;
+              letter-spacing: 1px;
+              background-color: $blue;
+              @include opacity(0.7);
+              height: 100%;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              text-align: center;
+
+              @media screen and (min-width: $break-medium) {
+                font-size: 12px;
+              }
+            }
+          }
+          span {
+            height: 20px;
+            bottom: -20px;
+            position: absolute;
+          }
+        }
+
+        p {
+          color: black;
+          font-size: 16px;
+          line-height: 19.2px;
+          margin-top: 50px;
+          width: 75%;
+        }
+      }
+    }
+  }
+}
+
+// Dashboard css
+table {
+  td {
+    input {
+      display: inline-block;
+      background-color: $blue;
+      color: white;
+      border: none;
+      padding: 5px;
+      margin-left: 10px;
+    }
+  }
+  td, th {
+      padding: 15px !important;
+  }
+}
+
+#school_detail {
+  margin: 100px 0;
+}
+
+#school_detail {
+  nav {
+    ul {
+      li {
+        font-size: 400;
+        list-style: none;
+        display: inline-block;
+        a {
+          color: black;
+          &:hover {
+            text-decoration: none;
+            color: $blue;
+          }
+        }
+      }
+    }
+  }
+}
+
+// place event bg image
+.event_bg {
+  background-image: url('../images/events.jpg');
+  background-position: center 50%;
+  height: 50%;
+
+  @media screen and (min-width: $break-medium) {
+    min-height: 50%;
+  }
+}
+
+.event_detail_bg {
+  background-position: center 50%;
+  height: 50%;
+
+  @media screen and (min-width: $break-medium) {
+    min-height: 50%;
+  }
+}
+
+.filter {
+  width: 75%;
+  margin: 100px auto 0 auto;
+  .container {
+    padding: 0;
+    h1 {
+      font-size: 18px;
+      margin-bottom: 10px;
+      color: black;
+    }
+    ul {
+      list-style: none;
+      margin: 0;
+      li {
+        background-color: $grey;
+        display: inline-block;
+        text-transform: uppercase;
+        font-size: 10px;
+        margin: 0 5px 10px 0;
+
+        a {
+          display: block;
+          color: white;
+          text-decoration: none;
+          padding: 10px 20px;
+        }
+      }
+    }
+  }
+}
+
+// breadcrumbs
+#breadcrumb{
+  list-style:none;
+  display: inline-block;
+
+  .icon{
+    font-size: 14px;
+  }
+
+  li{
+    float:left;
+    a{
+      color:#FFF !important;
+      display:block;
+      background: $blue;
+      text-decoration: none;
+      position:relative;
+      height: 40px;
+      line-height:40px;
+      padding: 0 10px 0 5px;
+      text-align: center;
+      margin-right: 23px;
+      font-family: $sun_antwerp;
+    }
+    &:first-child{
+      a{
+        padding-left:15px;
+        @include border-radius(4px 0 0 4px);
+        &:before{
+          border:none;
+         }
+      }
+    }
+    &:last-child{
+      a{
+        padding-right:15px;
+        color: $blue !important;
+        background-color: white;
+        @include border-radius(0 4px 4px 0);
+        &:before{
+          border-color: white;
+          border-left-color: transparent;
+         }
+        &:after{
+          border-left-color: white;
+          border-color: white;
+        }
+        &:hover{
+          background-color: white;
+
+          &:before{
+            border-color: white;
+            border-left-color:transparent;
+           }
+          &:after{
+            border-left-color: white;
+          }
+        }
+      }
+    }
+
+    a{
+      &:before,
+      &:after{
+        content: "";
+        position:absolute;
+        top: 0;
+        border:0 solid $blue;
+        border-width:20px 10px;
+        width: 0;
+        height: 0;
+      }
+      &:before{
+        left:-20px;
+        border-left-color:transparent;
+      }
+      &:after{
+        left:100%;
+        border-color:transparent;
+        border-left-color:$blue;
+      }
+      &:hover{
+        background-color: $grey;
+
+        &:before{
+          border-color: $grey;
+          border-left-color:transparent;
+         }
+        &:after{
+          border-left-color: $grey;
+        }
+      }
+      &:active{
+        background-color: $blue;
+
+        &:before{
+          border-color:$blue;
+          border-left-color:transparent;
+         }
+        &:after{
+          border-left-color:$blue;
+        }
+      }
+    }
+  }
+}
+
+.AP, .KdG, .HZS, .UA {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  width: 100%;
+  height: 100%;
+}
+
+.AP {
+  background-image: url('../images/school/ap.jpg');
+}
+
+.KdG {
+  background-image: url('../images/school/kdg.png');
+}
+
+.HZS {
+  background-image: url('../images/school/hzs.jpg');
+}
+
+.UA {
+  background-image: url('../images/school/ua.png');
+}
+
+#sortSchools {
+  .container {
+    .row {
+      .shadow {
+        .school_photo {
+          display: block;
+          height: 250px;
+          width: 50%;
+          margin: 0 auto;
+        }
+
+        .text {
+          text-align: center;
+        }
+      }
+    }
+  }
+}
