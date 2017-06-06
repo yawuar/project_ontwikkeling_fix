@@ -4,9 +4,9 @@
 <div class="container">
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
-            <button type="button" class="btn btn-default" onclick="window.location='{{ url('cms/studeren') }}'">< Terug</button>
+            <button type="button" class="btn btn-default" onclick="window.location='{{ url('cms/studeren/opleidingen') }}'">< Terug</button>
             @if(!empty($study))
-                <form action="{{ url('/cms/studeren/study-delete/' . $study->opleiding_id ) }}" method="POST", class="form-horizontal">
+                <form action="{{ url('/cms/studeren/opleidingen/study-delete/' . $study->opleiding_id ) }}" method="POST", class="form-horizontal">
                     {{ csrf_field() }}
                     <input name="_method" type="hidden" value="DELETE">
                     <!--Future: ask for confirmation-->
@@ -18,7 +18,7 @@
 
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
-            {!! Form::open(array('url'=>'/cms/studeren/study-post','method'=>'POST', 'files'=>true)) !!}
+            {!! Form::open(array('url'=>'/cms/studeren/opleidingen/study-post','method'=>'POST', 'files'=>true)) !!}
                 <input type="hidden" name="opleiding_id" value="{{ $study['opleiding_id'] or 'new' }}">
                 <div class="panel panel-default">
                     <div class="panel-heading">
@@ -35,7 +35,7 @@
 
                     @if(!empty($study->image_url))
                         <div class="panel-body">
-                            <img style='max-width: 100%' src='{{ URL::to('/') }}{!! $study->image_url !!}'>
+                            <img style='max-width: 100%' src='{{ URL::to('/') }}/{!! $study->image_url !!}'>
                         </div>
                     @endif
                     <div class="panel-body">

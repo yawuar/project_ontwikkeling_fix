@@ -85,10 +85,10 @@ Route::post('/cms/addNewUser', 'cmsController@addNewUser');
 /** studeren **/
 
 // opleidingen
-Route::get('/cms/studeren', 'StudyController@index');
-Route::get('/cms/studeren/editor/{id}', 'StudyController@show');
-Route::post('/cms/studeren/study-post', 'StudyController@store');
-Route::delete('/cms/studeren/study-delete/{id}', 'StudyController@destroy');
+Route::get('/cms/studeren/opleidingen', 'StudyController@index');
+Route::get('/cms/studeren/opleidingen/editor/{id}', 'StudyController@show');
+Route::post('/cms/studeren/opleidingen/study-post', 'StudyController@store');
+Route::delete('/cms/studeren/opleidingen/study-delete/{id}', 'StudyController@destroy');
 
 // scholen
 Route::get('/cms/studeren/scholen/', 'HighSchoolController@index');

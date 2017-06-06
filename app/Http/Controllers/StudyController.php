@@ -55,7 +55,7 @@ class StudyController extends Controller
           $imageTitle = time() . $file->getClientOriginalName();
           $file->move($destinationPath,$imageTitle);
 
-          $study->image_url = '/' . $destinationPath . '/' . $imageTitle;
+          $study->image_url = $destinationPath . '/' . $imageTitle;
       }
       $study->opleiding_id = $request->opleiding_id;
       $study->url = $request->url;
@@ -66,7 +66,7 @@ class StudyController extends Controller
       $study->school_id = $request->school;
       $study->save();
 
-      return redirect('/cms/studeren');
+      return redirect('/cms/studeren/opleidingen');
     }
 
     /**
@@ -116,6 +116,6 @@ class StudyController extends Controller
     {
       $study = Study::find($id);
       $study->delete();
-      return redirect('/cms/studeren');
+      return redirect('/cms/studeren/opleidingen');
     }
 }
