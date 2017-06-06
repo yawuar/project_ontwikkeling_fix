@@ -89,18 +89,6 @@ Route::post('/cms/studeren/study-post', 'StudyController@store');
 Route::delete('/cms/studeren/study-delete/{id}', 'StudyController@destroy');
 
 //API voor game
-Route::get('/posttest', function (Request $request) {
-    if ($request->token == '7D9wC3K9Cjna0NGVOXJl') {
-        return "OK";
-        /*return response()->json([
-            'name' => 'Adriaan',
-            'state' => 'CA'
-        ]);*/
-    } else {
-        return "INCORRECT TOKEN";
-    }
-});
-
 Route::get('/api/login', 'restapiController@login');
 Route::get('/api/register', 'restapiController@register');
 Route::get('/api/send-score', 'restapiController@sendScore');

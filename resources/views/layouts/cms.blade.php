@@ -17,6 +17,13 @@
         body { padding-top: 70px; }
     </style>
     <!-- Scripts -->
+    <script
+        src="https://code.jquery.com/jquery-3.2.1.js"
+        integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+        crossorigin="anonymous">
+    </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
     <script>
         window.Laravel = {!! json_encode([
             'csrfToken' => csrf_token(),
@@ -36,24 +43,42 @@
                 </div>
 
                 <div class="collapse navbar-collapse" id="app-navbar-collapse">
-                    <!-- Left Side Of Navbar -->
+                    @if (!Auth::guest() && Auth::user()->user_role > 0)
                     <ul class="nav navbar-nav">
+                        @if (Auth::user()->user_role == 3)
                         <li>
                             <a href="{{ url('cms/homepage') }}" id="homepage">Homepage</a>
                         </li>
                         <li>
                             <a href="{{ url('cms/stad') }}" id="stad">Stad</a>
                         </li>
-                        <li>
-                            <a href="{{ url('cms/studeren') }}" id="studeren">Studeren</a>
-                        </li>
                         <li class="dropdown">
-                            <a href="{{ url('cms/articles') }}" id="articles">Artikelen</a>
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Studeren<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="{{ url('cms/studeren/scholen') }}" id="articles">Scholen</a></li>
+                                <li><a href="{{ url('cms/studeren/faculties') }}" id="articles">Faculteiten</a></li>
+                                <li><a href="{{ url('cms/studeren/opleidingen') }}" id="articles">opleidingen</a></li>
+                            </ul>
                         </li>
+                        @endif
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Artikelen<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                @if (Auth::user()->user_role >= 1)
+                                <li><a href="{{ url('cms/articles') }}" id="articles">Artikelen</a></li>
+                                @endif
+                                @if (Auth::user()->user_role >= 2)
+                                <li><a href="{{ url('cms/articles/gate15') }}" id="articles">Gate15 Artikelen</a></li>
+                                @endif
+                            </ul>
+                        </li>
+                        @if (Auth::user()->user_role == 3)
                         <li>
                             <a href="{{ url('cms/gebruikers') }}" id="gebruikers">Gebruikers</a>
                         </li>
+                        @endif
                     </ul>
+                    @endif
 
                     <script>
                         //future: add active classes on current url --> check what current URL is and set that id from top nav to active?
