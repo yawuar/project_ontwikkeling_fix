@@ -22,7 +22,7 @@ class EventsController extends Controller
 
   public function showRandomEvent() {
     $event = Gate15Event::get()->random(1)->first();
-    $eventName = strtolower(str_replace(' ', '-', $event['title']));
+    $eventName = strtolower(str_replace(' ', '_', $event['title']));
     return redirect('events/' . $eventName);
   }
 

@@ -48,7 +48,7 @@
                   @else
                     <a class="heart btn_{{ $key }}"></a>
                   @endif
-                  <div class="f_photo" style="background-image: url('{{ $faculty['image_url'] }}')"></div>
+                  <div onclick="location.href='/studeren/{{ str_slug($faculty['name'], '-') }}'" class="f_photo" style="background-image: url('{{ $faculty['image_url'] }}')"></div>
                 </div>
                 <div class="text">
                   <p><a href="/studeren/{{ str_slug($faculty['name'], '-') }}">{{ $faculty['name'] }}</a></p>

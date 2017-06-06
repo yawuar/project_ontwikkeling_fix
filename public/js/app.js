@@ -124,11 +124,6 @@
     });
   }
 
-  function clickFaculty(e) {
-    var url = e.currentTarget.querySelectorAll('.text p a')[0].href;
-    window.location.href = url;
-  }
-
   function bindEvents() {
     if (window.location.pathname.indexOf('/testimonials/') > -1 || window.location.pathname.indexOf('/events/') > -1 || window.location.pathname.indexOf('/school/') > -1 || window.location.pathname.indexOf('/studeren/') > -1) {
       var getNavbar = document.getElementsByClassName('navbar-default')[0];
@@ -174,11 +169,6 @@
     var heartCourse = $('#school_detail [class*="course"]');
     for(var h = 0; h < heartCourse.length; h++) {
       heartCourse[h].addEventListener('click', activateCourseHeart);
-    }
-
-    var getFaculties = document.querySelectorAll('#school .shadow');
-    for(var x = 0; x < getFaculties.length; x++) {
-      getFaculties[x].addEventListener('click', clickFaculty);
     }
   }
 

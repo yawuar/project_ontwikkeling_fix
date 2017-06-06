@@ -24,7 +24,7 @@
                 @else
                   <a class="heart course{{ $study['opleiding_id'] }} opleiding_{{ $key }}"></a>
                 @endif
-                <div class="f_photo" style="background-image: url('{{ $study['image_url'] }}')"></div>
+                <div onclick="location.href='./{{ str_slug($facultyName, '-') }}/{{ str_slug($study['name'], '-') }}'" class="f_photo" style="background-image: url('{{ $study['image_url'] }}')"></div>
               </div>
               <div class="text">
                 <p><a href="./{{ str_slug($facultyName, '-') }}/{{ str_slug($study['name'], '-') }}">{{ $study['name'] }}</a></p>

@@ -52,7 +52,7 @@
   </section>
 
   <!-- Artikelen -->
-  <a href="/events/{{ strtolower(str_replace(' ', '-', $event['title'])) }}" id="mas" style="background-image: url('{{ $event['picture_url'] }}')">
+  <a href="/events/{{ strtolower(str_replace(' ', '_', $event['title'])) }}" id="mas" style="background-image: url('{{ $event['picture_url'] }}')">
     <div class="mas-box"></div>
     <div class="info">
       <h1>{{ $event['title'] }}</h1>

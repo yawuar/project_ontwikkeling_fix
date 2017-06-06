@@ -97,7 +97,6 @@ figure {
 .active {
   top: 0;
   background-color: #ffffff !important;
-  @include box-shadow(0px 0.5px 0px $grey);
   .container {
     #navbar {
       ul {
