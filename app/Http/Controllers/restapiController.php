@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Auth;
 
 use App\User;
+use App\Score;
 
 class restapiController extends Controller
 {
@@ -52,10 +53,25 @@ class restapiController extends Controller
     }
 
     public function getScore(){
-        if ($request->token == '7D9wC3K9Cjna0NGVOXJl') {
-            return "OK";
+        if (isset($_GET['token']) && $_GET['token'] == '7D9wC3K9Cjna0NGVOXJl' && isset($_GET['username'])) {
+            $username = $_GET['username'];
+            $userid = User::select('id')->where('name', '=', $username)->get();
+            $userid = $userid[0]->id;
+
+            $scoreStacker = Score::select('scoreStacker')->where('user_id', '=', $userid)->get();
+            $scoreFrogger = Score::select('scoreFrogger')->where('user_id', '=', $userid)->get();
+            $scoreFlappy = Score::select('scoreFlappy')->where('user_id', '=', $userid)->get();
+            $scoreMaze = Score::select('scoreMaze')->where('user_id', '=', $userid)->get();
+
+            return response()->json([
+                'scoreStacker' => $scoreStacker[0]->scoreStacker,
+                'scoreFrogger' => $scoreFrogger[0]->scoreFrogger,
+                'scoreFlappy' => $scoreFlappy[0]->scoreFlappy,
+                'scoreMaze' => $scoreMaze[0]->scoreMaze
+            ]);
         } else {
-            return "INCORRECT TOKEN";
+            return 'false';
         }
     }
+
 }
