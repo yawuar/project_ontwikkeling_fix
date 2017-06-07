@@ -76,7 +76,7 @@
                     <td>{{$user->name}}</td>
                     <td>{{$user->email}}</td>
                     <td>
-                        <form action="/cms/changeUserPermissions" role="form" method="POST">
+                        <form action="{{ url('/cms/changeUserPermissions') }}" role="form" method="POST">
                         {{ csrf_field() }}
                         <input type="hidden" name="user_id" value="{{ $user->id }}">
                         <select name="permissions">
