@@ -56,10 +56,28 @@ class restapiController extends Controller
     }
 
     public function sendScore(){
-        if ($request->token == '7D9wC3K9Cjna0NGVOXJl') {
+        if (isset($_GET['token']) && $_GET['token'] == '7D9wC3K9Cjna0NGVOXJl' && isset($_GET['username']) && isset($_GET['scoreStacker']) && isset($_GET['scoreFrogger']) && isset($_GET['scoreFlappy']) && isset($_GET['scoreMaze'])) {
+            $username = $_GET['username'];
+            $userid = User::select('id')->where('name', '=', $username)->get();
+            $userid = $userid[0]->id;
+
+            $scoreStacker = $_GET['scoreStacker'];
+            $scoreFrogger = $_GET['scoreFrogger'];
+            $scoreFlappy = $_GET['scoreFlappy'];
+            $scoreMaze = $_GET['scoreMaze'];
+
+            $score = Score::where('user_id', '=', $userid)->get();
+            $score = $score[0];
+            $score->scoreStacker = (int) $scoreStacker;
+            $score->scoreFrogger = (int) $scoreFrogger;
+            $score->scoreFlappy = (int) $scoreFlappy;
+            $score->scoreMaze = (int) $scoreMaze;
+
+            $score->save();
+
             return "OK";
         } else {
-            return "INCORRECT TOKEN";
+            return 'false';
         }
     }
 
@@ -76,13 +94,6 @@ class restapiController extends Controller
 
             $response = ($scoreStacker[0]->scoreStacker . " " . $scoreFrogger[0]->scoreFrogger . " " . $scoreFlappy[0]->scoreFlappy . " " . $scoreMaze[0]->scoreMaze);
             return $response;
-
-            /*return response()->json([
-                'scoreStacker' => $scoreStacker[0]->scoreStacker,
-                'scoreFrogger' => $scoreFrogger[0]->scoreFrogger,
-                'scoreFlappy' => $scoreFlappy[0]->scoreFlappy,
-                'scoreMaze' => $scoreMaze[0]->scoreMaze
-            ]);*/
         } else {
             return 'false';
         }
