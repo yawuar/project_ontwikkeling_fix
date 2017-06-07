@@ -18,7 +18,7 @@
 
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
-            {!! Form::open(array('url'=>'/cms/studeren/opleidingen/study-post','method'=>'POST', 'files'=>true)) !!}
+            {!! Form::open(array('url'=>'url('/cms/studeren/opleidingen/study-post')','method'=>'POST', 'files'=>true)) !!}
                 <input type="hidden" name="opleiding_id" value="{{ $study['opleiding_id'] or 'new' }}">
                 <div class="panel panel-default">
                     <div class="panel-heading">
