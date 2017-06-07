@@ -69,7 +69,7 @@ class TestimonialController extends Controller
 
     public function showArticle() {
       $testimonial = Gate15::where('is_accepted', 1)->get()->random(1)->first();
-      return redirect('testimonials/article/' . $testimonial['id']);
+      return redirect(url('testimonials/article/' . $testimonial['id']));
     }
 
     public function getDataByType($type) {

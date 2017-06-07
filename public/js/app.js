@@ -58,6 +58,8 @@
       $(e.target).addClass('activeTestimonial');
     }
     var newhtmls = "";
+    console.log(window.location.href);
+    console.log(e.target.href);
     $.ajax({
       url: e.target.href,
       success: function(data) {

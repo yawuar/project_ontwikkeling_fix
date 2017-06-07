@@ -6,7 +6,7 @@
     <div class="container">
       <nav>
         <ul id="breadcrumb">
-          <li><a href="/studeren#school"><span class="icon icon-home">studeren</span></a></li>
+          <li><a href="{{ url('/studeren#school') }}"><span class="icon icon-home">studeren</span></a></li>
           <li><a><span>{{ $facultyName }}</span></a></li>
         </ul>
       </nav>
@@ -24,10 +24,10 @@
                 @else
                   <a class="heart course{{ $study['opleiding_id'] }} opleiding_{{ $key }}"></a>
                 @endif
-                <div onclick="location.href='./{{ str_slug($facultyName, '-') }}/{{ str_slug($study['name'], '-') }}'" class="f_photo" style="background-image: url('{{ $study['image_url'] }}')"></div>
+                <div onclick="location.href='{{ url('/studeren/' . str_slug($facultyName, '-') . '/' . str_slug($study['name'], '-')) }}'" class="f_photo" style="background-image: url('{{ asset($study['image_url']) }}')"></div>
               </div>
               <div class="text">
-                <p><a href="./{{ str_slug($facultyName, '-') }}/{{ str_slug($study['name'], '-') }}">{{ $study['name'] }}</a></p>
+                <p><a href="{{ url('/studeren/' . str_slug($facultyName, '-') . '/' . str_slug($study['name'], '-')) }}">{{ $study['name'] }}</a></p>
               </div>
             </div>
           </div>

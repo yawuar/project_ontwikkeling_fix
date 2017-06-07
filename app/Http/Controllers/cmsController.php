@@ -101,7 +101,7 @@ class cmsController extends Controller
         }
         $article->save();
 
-        return redirect('/cms/articles');
+        return redirect(url('/cms/articles'));
     }
 
     public function articleDelete(Request $request){
@@ -110,11 +110,11 @@ class cmsController extends Controller
         $article = Article::find($request->postId);
         $article->delete();
 
-        return redirect('/cms/articles');
+        return redirect(url('/cms/articles'));
     }
 
     public function gate15ArticleDelete(Request $request){
-        if (!$this->checkPermission(2)) { return redirect('/cms'); }
+        if (!$this->checkPermission(2)) { return redirect(url('/cms')); }
 
         $article = Gate15::find($request->postId);
 
@@ -122,7 +122,7 @@ class cmsController extends Controller
         $article->is_deleted = 1;
         $article->save();
 
-        return redirect('/cms/articles/gate15');
+        return redirect(url('/cms/articles/gate15'));
     }
 
     public function articleToggleAccept(Request $request){
@@ -146,13 +146,13 @@ class cmsController extends Controller
         $article->save();
 
 
-        return redirect('/cms/articles/' . 'editor/' . $uriAffix . $article->id);
+        return redirect(url('/cms/articles/' . 'editor/' . $uriAffix . $article->id));
     }
 
 //homepage
     public function homepage(){
         if (!$this->checkPermission(3)) { return redirect('/cms'); }
-        
+
         //introtekst
         $file = 'config/webpagesContent.json';
         $content = json_decode(file_get_contents($file), false);
@@ -164,7 +164,7 @@ class cmsController extends Controller
 
     public function homepageIntrotekstPost(Request $request){
         if (!$this->checkPermission(3)) { return redirect('/cms'); }
-        
+
         $file = 'config/webpagesContent.json';
         $content = json_decode(file_get_contents($file), false);
 
@@ -172,12 +172,12 @@ class cmsController extends Controller
 
         file_put_contents($file, json_encode($content));
 
-        return redirect('/cms/homepage');
+        return redirect(url('/cms/homepage'));
     }
 
     public function homepageTaglinePost(Request $request){
         if (!$this->checkPermission(3)) { return redirect('/cms'); }
-        
+
         $file = 'config/webpagesContent.json';
         $content = json_decode(file_get_contents($file), false);
 
@@ -185,13 +185,13 @@ class cmsController extends Controller
 
         file_put_contents($file, json_encode($content));
 
-        return redirect('/cms/homepage');
+        return redirect(url('/cms/homepage'));
     }
 
 //stad
     public function stad(){
         if (!$this->checkPermission(3)) { return redirect('/cms'); }
-        
+
         //introtekst
         $file = 'config/webpagesContent.json';
         $content = json_decode(file_get_contents($file), false);
@@ -205,7 +205,7 @@ class cmsController extends Controller
 
     public function stadIntrotekstPost(Request $request){
         if (!$this->checkPermission(3)) { return redirect('/cms'); }
-        
+
         $file = 'config/webpagesContent.json';
         $content = json_decode(file_get_contents($file), false);
 
@@ -213,12 +213,12 @@ class cmsController extends Controller
 
         file_put_contents($file, json_encode($content));
 
-        return redirect('/cms/stad');
+        return redirect(url('/cms/stad'));
     }
 
     public function getOneLocation($id){
         if (!$this->checkPermission(3)) { return redirect('/cms'); }
-        
+
         if ($id == "new") {
             return view('cms/locationdetail');
         } else {
@@ -229,7 +229,7 @@ class cmsController extends Controller
 
     public function locationPost(Request $request){
         if (!$this->checkPermission(3)) { return redirect('/cms'); }
-        
+
         if ($request->locationId == 'new') {
             $location = new Atypical_Location;
         } else {
@@ -256,22 +256,22 @@ class cmsController extends Controller
         $location->content = $request->content;
         $location->save();
 
-        return redirect('/cms/stad');
+        return redirect(url('/cms/stad'));
     }
 
     public function locationDelete(Request $request){
         if (!$this->checkPermission(3)) { return redirect('/cms'); }
-        
+
         $location = Atypical_Location::find($request->locationId);
         $location->delete();
 
-        return redirect('/cms/stad');
+        return redirect(url('/cms/stad'));
     }
 
     //user role change
     public function getUsers() {
         if (!$this->checkPermission(3)) { return redirect('/cms'); }
-        
+
         $users = User::all();
         $addingUser = false;
 
@@ -280,7 +280,7 @@ class cmsController extends Controller
 
     public function getUsersNew() {
         if (!$this->checkPermission(3)) { return redirect('/cms'); }
-        
+
         $users = User::all();
         $addingUser = true;
 
@@ -289,19 +289,19 @@ class cmsController extends Controller
 
     public function changeUserPermissions(Request $request) {
         if (!$this->checkPermission(3)) { return redirect('/cms'); }
-        
+
         //future: maybe warn/deny if you are trying to change your own permissions?
         //--> errormessage = "Je kan niet je eigen permissions aanpassen" // compact('errormessage') // in blade: checken op errormessage en weergeven
         $data = $request->all();
         $user = User::find($data['user_id']);
         $user->user_role = $data['permissions'];
         $user->save();
-        return redirect('/cms/gebruikers');
+        return redirect(url('/cms/gebruikers'));
     }
 
     public function addNewUser(Request $data) {
         if (!$this->checkPermission(3)) { return redirect('/cms'); }
-        
+
         User::create([
             'name' => $data['name'],
             'email' => $data['email'],
@@ -309,13 +309,13 @@ class cmsController extends Controller
             'user_role' => $data['user_role']
         ]);
 
-        return redirect('/cms/gebruikers');
+        return redirect(url('/cms/gebruikers'));
     }
 
     //check if the user has permission to access a webpage
     public function checkPermission($neededPermission) {
         if (Auth::guest()) {return false;}
-        
+
         $user = Auth::user();
         $user_role = (int)$user->user_role;
 
@@ -327,4 +327,3 @@ class cmsController extends Controller
     }
 
 }
-

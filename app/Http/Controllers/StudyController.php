@@ -66,7 +66,7 @@ class StudyController extends Controller
       $study->school_id = $request->school;
       $study->save();
 
-      return redirect('/cms/studeren/opleidingen');
+      return redirect(url('/cms/studeren/opleidingen'));
     }
 
     /**
@@ -116,6 +116,6 @@ class StudyController extends Controller
     {
       $study = Study::find($id);
       $study->delete();
-      return redirect('/cms/studeren/opleidingen');
+      return redirect(url('/cms/studeren/opleidingen'));
     }
 }

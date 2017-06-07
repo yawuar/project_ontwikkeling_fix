@@ -673,7 +673,17 @@ header {
   }
 }
 
+#skyline {
+  background-image: url('../images/skyline.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 134px;
+  width: 100%;
+  margin-top: 50px;
+}
+
 footer {
+  width: 100%;
   background-color: black;
 
   p {

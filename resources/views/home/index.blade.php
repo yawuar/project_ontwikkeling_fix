@@ -33,8 +33,8 @@
     <div class="container">
       <div class="row">
         @foreach($articles as $article)
-          <a href="testimonials/article/{{ $article['id'] }}" class="col-xs-12">
-            <div style="background-image: url('{{ asset($article['picture_url']) }}')" class="person">
+          <a href="{{ url('testimonials/article/' . $article['id']) }}" class="col-xs-12">
+            <div style="background-image: url('{{ $article['picture_url'] }}')" class="person">
               <div class="bv-info">
                 <span class="date">{{ $article['published_on'] }}</span>
                 <h2>{{ $article['title'] }}</h2>
@@ -50,15 +50,11 @@
   </section>
 
   <!-- Artikelen -->
-  <a href="/events/{{ strtolower(str_replace(' ', '_', $event['title'])) }}" id="mas" style="background-image: url('{{ $event['picture_url'] }}')">
+  <a href="{{ url('/events/' . strtolower(str_replace(' ', '_', $event['title']))) }}" id="mas" style="background-image: url('{{ $event['picture_url'] }}')">
     <div class="mas-box"></div>
     <div class="info">
       <h1>{{ $event['title'] }}</h1>
       <span>{{ gmdate("d-m-Y", $event['event_begin_date']) }}</span>
     </div>
   </a>
-
-  <section id="footer">
-
-  </section>
 @endsection
