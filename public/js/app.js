@@ -81,7 +81,6 @@
   }
 
   function activateHeart(e) {
-    console.log(window.location.href);
     var url, removeClass, addClass, isActivateHeart;
     if($(e.target).hasClass('heart')) {
       url = window.location.href + '/heart/session/' + e.target.classList[1];
@@ -106,6 +105,7 @@
 
   function activateCourseHeart(e) {
     // e.preventDefault();
+    console.log(window.location.href);
     var url, removeClass, addClass, isActivateHeart;
     if($(e.target).hasClass('heart')) {
       url = window.location.href + '/heart/session/course/' + e.target.classList[1];
