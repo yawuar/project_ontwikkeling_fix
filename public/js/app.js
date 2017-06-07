@@ -60,8 +60,6 @@
       $(e.target).addClass('activeTestimonial');
     }
     var newhtmls = "";
-    console.log(window.location.href);
-    console.log(e.target.href);
     $.ajax({
       url: e.target.href,
       success: function(data) {
@@ -83,13 +81,14 @@
   }
 
   function activateHeart(e) {
+    console.log(window.location.href);
     var url, removeClass, addClass, isActivateHeart;
     if($(e.target).hasClass('heart')) {
-      url = '/studeren/heart/session/' + e.target.classList[1];
+      url = window.location.href + '/heart/session/' + e.target.classList[1];
       removeClass = 'heart';
       addClass = 'fullHeart';
     } else {
-      url = '/studeren/heart/session/' + e.target.classList[1] + '/remove';
+      url = window.location.href + '/heart/session/' + e.target.classList[1] + '/remove';
       removeClass = 'fullHeart';
       addClass = 'heart';
     }
@@ -109,11 +108,11 @@
     // e.preventDefault();
     var url, removeClass, addClass, isActivateHeart;
     if($(e.target).hasClass('heart')) {
-      url = '/studeren/heart/session/course/' + e.target.classList[1];
+      url = window.location.href + '/heart/session/course/' + e.target.classList[1];
       removeClass = 'heart';
       addClass = 'fullHeart';
     } else {
-      url = '/studeren/heart/session/course/' + e.target.classList[1] + '/remove';
+      url = window.location.href + '/heart/session/course/' + e.target.classList[1] + '/remove';
       removeClass = 'fullHeart';
       addClass = 'heart';
     }
