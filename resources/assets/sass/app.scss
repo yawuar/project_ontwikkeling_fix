@@ -566,6 +566,10 @@ header {
     padding-left: 0;
     padding-right: 0;
     nav {
+      padding: 0 15px;
+      @media screen and (min-width: $break-medium) {
+        padding: 0;
+      }
       ul {
         li {
           font-size: 400;
@@ -584,6 +588,12 @@ header {
     .row {
       margin-right: 0;
       margin-left: 0;
+      .col-xs-12 {
+        padding: 0 15px;
+        @media screen and (min-width: $break-medium) {
+          padding: 0;
+        }
+      }
       .person {
         position: relative;
         background-size: cover;
@@ -644,6 +654,10 @@ header {
 
         .col-xs-10 {
           padding-left: 0;
+          width: 100%;
+          @media screen and (min-width: $break-medium) {
+            width: 83.333%;
+          }
         }
       }
 
@@ -651,7 +665,10 @@ header {
         color: black;
         font-size: 18px;
         line-height: 25.2px;
-        width: 80%;
+        width: 100%;
+        @media screen and (min-width: $break-medium) {
+          width: 80%;
+        }
 
         &:first-child {
           font-size: 16px;
