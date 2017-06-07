@@ -5,7 +5,7 @@
   <div class="container">
     <nav>
       <ul id="breadcrumb">
-        <li><a href="{{ url('/#events_gate15') }}"><span>Overzicht</span></a></li>
+        <li><a href="{{ url('/events/#events_gate15') }}"><span>Overzicht</span></a></li>
         <li><a><span>{{ str_limit($event['title'], 50) }}</span></a></li>
       </ul>
     </nav>
