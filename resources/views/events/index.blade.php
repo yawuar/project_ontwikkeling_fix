@@ -21,7 +21,7 @@
     <ul>
       <li><a href="{{ url('events/filter/all') }}">Alle events</a></li>
       @foreach($uniqueTags as $tag)
-      <li><a href="{{ url('events/filter/' . str_replace(' ', '-', $tag['event_type'])) }}">{{ $tag['event_type'] }}</a></li>
+      <li><a href="{{ url('events/filter/' . str_replace(' ', '_', $tag['event_type'])) }}">{{ $tag['event_type'] }}</a></li>
       @endforeach
     </ul>
   </div>

@@ -31,7 +31,7 @@ class EventsController extends Controller
     if($type === 'all') {
       $eventsByTag = Gate15Event::get();
     } else {
-      $typeName = str_replace('-', ' ', $type);
+      $typeName = str_replace('_', ' ', $type);
       $eventsByTag = Gate15Event::where('event_type', $typeName)->get();
     }
     return Response::json($eventsByTag);
