@@ -929,8 +929,11 @@ footer {
 #school, #school_detail {
   margin-bottom: 50px;
   .container {
-    padding-left: 0;
-    padding-right: 0;
+    padding: 0 15px;
+    @media screen and (min-width: $break-medium) {
+      padding-left: 0;
+      padding-right: 0;
+    }
     .row {
       @media screen and (min-width: $break-medium) {
         display: flex;
