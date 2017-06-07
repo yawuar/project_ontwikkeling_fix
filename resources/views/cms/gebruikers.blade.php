@@ -56,7 +56,7 @@
                                     <button type="submit" class="btn btn-primary">
                                         Gebruiker Aanmaken
                                     </button>
-                                    <a href="/cms/gebruikers" class="btn btn-danger pull-right">Annuleren</a>
+                                    <a href="{{ url('/cms/gebruikers') }}" class="btn btn-danger pull-right">Annuleren</a>
                                 </div>
                             </div>
                         </form>

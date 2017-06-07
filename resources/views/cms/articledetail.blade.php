@@ -25,7 +25,7 @@
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             @if (Auth::user()->user_role == 1 && isset($article) && $article->is_accepted == 1)
-           
+
                 <div class="panel panel-default">
                     <div class="panel-heading"><h3>{{ $article->title or '' }}</h3></div>
 
@@ -36,7 +36,7 @@
                     </div>
                 </div>
             @else
-                {!! Form::open(array('url'=>'/cms/article-post','method'=>'POST', 'files'=>true)) !!}
+                {!! Form::open(array('url'=>url('/cms/article-post'),'method'=>'POST', 'files'=>true)) !!}
                 <input type="hidden" name="postId" value="{{ $article->id or 'new' }}">
                 <div class="panel panel-default">
                     <div class="panel-heading">
