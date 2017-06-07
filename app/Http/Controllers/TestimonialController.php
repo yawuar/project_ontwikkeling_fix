@@ -33,7 +33,7 @@ class TestimonialController extends Controller
       $articles = array_values(array_sort($articles, function ($value) {
         return $value['published_on'];
       }));
-      
+
       $articles = array_reverse($articles);
 
       return view('testimonials.index', compact('articles', 'uniqueTags'));

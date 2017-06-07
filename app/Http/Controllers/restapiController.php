@@ -15,8 +15,7 @@ class restapiController extends Controller
             $password = $_GET['password'];
             if (Auth::attempt(array('name' => $username, 'password' => $password))){
                 return "success";
-            }
-            else {
+            } else {
                 return "false";
             }
         } else {
@@ -40,7 +39,7 @@ class restapiController extends Controller
 
             return "success";
         } else {
-            return('false');
+            return 'false';
         }
     }
 
