@@ -107,6 +107,7 @@
     // e.preventDefault();
     var path = window.location.href.replace(window.location.pathname, '');
     console.log(window.location.href);
+    console.log(window.location);
     console.log(path);
     var url, removeClass, addClass, isActivateHeart;
     if($(e.target).hasClass('heart')) {
