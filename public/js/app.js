@@ -26,6 +26,8 @@
       $(e.target).addClass('activeEvent');
     }
     var newhtmls = "";
+    console.log(e.target.href);
+    console.log(window.location.href);
     $.ajax({
       url: e.target.href,
       success: function(data) {
