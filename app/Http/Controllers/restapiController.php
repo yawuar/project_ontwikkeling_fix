@@ -38,6 +38,16 @@ class restapiController extends Controller
                 'user_role' => 0
             ]);
 
+            $userid = User::select('id')->where('name', '=', $username)->get();
+            $userid = $userid[0]->id;
+
+            $userscore = new Score;
+            $userscore->scoreStacker = 0;
+            $userscore->scoreFrogger = 0;
+            $userscore->scoreFlappy = 0;
+            $userscore->scoreMaze = 0;
+            $userscore->save();
+
             return "success";
         } else {
             return 'false';
