@@ -106,6 +106,7 @@
   function activateCourseHeart(e) {
     // e.preventDefault();
     var path = window.location.href.replace(window.location.pathname, '');
+    console.log(path);
     var url, removeClass, addClass, isActivateHeart;
     if($(e.target).hasClass('heart')) {
       url = path + '/studeren/heart/session/course/' + e.target.classList[1];
