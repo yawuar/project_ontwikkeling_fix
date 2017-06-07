@@ -11,7 +11,7 @@
                 <div class="panel panel-default">
                     <div class="panel-heading">Nieuwe gebruiker aanmaken</div>
                     <div class="panel-body">
-                        <form class="form-horizontal" role="form" method="POST" action="/cms/addNewUser">
+                        <form class="form-horizontal" role="form" method="POST" action="{{ url('/cms/addNewUser') }}">
                             {{ csrf_field() }}
 
                             <div class="form-group">
@@ -80,10 +80,10 @@
                         {{ csrf_field() }}
                         <input type="hidden" name="user_id" value="{{ $user->id }}">
                         <select name="permissions">
-                            <option value="0" {{ ($user->user_role === 0) ? "selected" : "" }}>User</option>
-                            <option value="1" {{ ($user->user_role === 1) ? "selected" : "" }}>Writer</option>
-                            <option value="2" {{ ($user->user_role === 2) ? "selected" : "" }}>Editor</option>
-                            <option value="3" {{ ($user->user_role === 3) ? "selected" : "" }}>Admin</option>
+                            <option value="0" {{ ($user->user_role == 0) ? "selected" : "" }}>User</option>
+                            <option value="1" {{ ($user->user_role == 1) ? "selected" : "" }}>Writer</option>
+                            <option value="2" {{ ($user->user_role == 2) ? "selected" : "" }}>Editor</option>
+                            <option value="3" {{ ($user->user_role == 3) ? "selected" : "" }}>Admin</option>
                         </select>
                         <input type="submit" value='aanpassen' />
                         </form>
