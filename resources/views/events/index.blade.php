@@ -12,16 +12,16 @@
 
 <div id="random">
   <p>Geef een willekeurig evenement</p>
-  <a href="{{ url('/events/random/event') }}"></a>
+  <a href="{{ url('events/random/event') }}"></a>
 </div>
 
 <div class="filter events">
   <div class="container">
     <h1>Categorie</h1>
     <ul>
-      <li><a href="{{ url('/events/filter/all') }}">Alle events</a></li>
+      <li><a href="{{ url('events/filter/all') }}">Alle events</a></li>
       @foreach($uniqueTags as $tag)
-      <li><a href="{{ url('/events/filter/' . str_replace(' ', '-', $tag['event_type'])) }}">{{ $tag['event_type'] }}</a></li>
+      <li><a href="{{ url('events/filter/' . str_replace(' ', '-', $tag['event_type'])) }}">{{ $tag['event_type'] }}</a></li>
       @endforeach
     </ul>
   </div>
@@ -32,7 +32,7 @@
     <div class="row">
       @foreach($events as $event)
         <div class="col-xs-12 col-sm-6 col-lg-4">
-          <a href=" {{ url('/events/' . strtolower(str_replace(' ', '_', $event->title))) }}" style="background-image: url('{{ $event->picture_url }}')" class="photo">
+          <a href=" {{ url('events/' . strtolower(str_replace(' ', '_', $event->title))) }}" style="background-image: url('{{ $event->picture_url }}')" class="photo">
             <div class="bv-info">
               <h2>{{ $event->title }}</h2>
             </div>
