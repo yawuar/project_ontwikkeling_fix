@@ -734,9 +734,13 @@ header #search .input-group-btn .btn .glyphicon {
 
 /* line 676, ../../resources/assets/sass/app.scss */
 footer {
-  background-color: black;
+  background-image: url("../images/skyline.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 134px;
+  width: 100%;
 }
-/* line 679, ../../resources/assets/sass/app.scss */
+/* line 683, ../../resources/assets/sass/app.scss */
 footer p {
   font-size: 16px;
   text-align: center;
@@ -745,46 +749,46 @@ footer p {
   padding: 20px;
 }
 
-/* line 689, ../../resources/assets/sass/app.scss */
+/* line 693, ../../resources/assets/sass/app.scss */
 .city {
   background-image: url("../images/city.jpg");
   background-position: center 85%;
   height: 50%;
 }
 @media screen and (min-width: 768px) {
-  /* line 689, ../../resources/assets/sass/app.scss */
+  /* line 693, ../../resources/assets/sass/app.scss */
   .city {
     min-height: 50%;
   }
 }
 
-/* line 699, ../../resources/assets/sass/app.scss */
+/* line 703, ../../resources/assets/sass/app.scss */
 #events {
   margin-bottom: 50px;
 }
-/* line 702, ../../resources/assets/sass/app.scss */
+/* line 706, ../../resources/assets/sass/app.scss */
 #events .col-xs-12:nth-child(even) .event {
   margin-left: 0;
 }
 @media screen and (min-width: 768px) {
-  /* line 702, ../../resources/assets/sass/app.scss */
+  /* line 706, ../../resources/assets/sass/app.scss */
   #events .col-xs-12:nth-child(even) .event {
     margin-left: 15%;
   }
 }
-/* line 710, ../../resources/assets/sass/app.scss */
+/* line 714, ../../resources/assets/sass/app.scss */
 #events .text {
   margin-top: 25px;
 }
-/* line 712, ../../resources/assets/sass/app.scss */
+/* line 716, ../../resources/assets/sass/app.scss */
 #events .text p {
   color: black;
 }
-/* line 716, ../../resources/assets/sass/app.scss */
+/* line 720, ../../resources/assets/sass/app.scss */
 #events .col-md-6 {
   margin-bottom: 50px;
 }
-/* line 719, ../../resources/assets/sass/app.scss */
+/* line 723, ../../resources/assets/sass/app.scss */
 #events .event {
   position: relative;
   background-size: cover;
@@ -793,13 +797,13 @@ footer p {
   margin-bottom: 100px;
 }
 @media screen and (min-width: 768px) {
-  /* line 719, ../../resources/assets/sass/app.scss */
+  /* line 723, ../../resources/assets/sass/app.scss */
   #events .event {
     width: 300px;
     height: 300px;
   }
 }
-/* line 731, ../../resources/assets/sass/app.scss */
+/* line 735, ../../resources/assets/sass/app.scss */
 #events .event .bv-info {
   position: absolute;
   right: -30%;
@@ -808,20 +812,20 @@ footer p {
   height: 40%;
 }
 @media screen and (min-width: 768px) {
-  /* line 731, ../../resources/assets/sass/app.scss */
+  /* line 735, ../../resources/assets/sass/app.scss */
   #events .event .bv-info {
     right: -40%;
     width: 80%;
   }
 }
-/* line 743, ../../resources/assets/sass/app.scss */
+/* line 747, ../../resources/assets/sass/app.scss */
 #events .event .bv-info .date {
   font-family: "Sun_antwerpen";
   color: #8d9092;
   display: block;
   text-align: right;
 }
-/* line 750, ../../resources/assets/sass/app.scss */
+/* line 754, ../../resources/assets/sass/app.scss */
 #events .event .bv-info h2 {
   font-size: 17px;
   letter-spacing: 1px;
@@ -834,25 +838,25 @@ footer p {
   align-items: center;
 }
 @media screen and (min-width: 768px) {
-  /* line 750, ../../resources/assets/sass/app.scss */
+  /* line 754, ../../resources/assets/sass/app.scss */
   #events .event .bv-info h2 {
     font-size: 22px;
   }
 }
 
-/* line 769, ../../resources/assets/sass/app.scss */
+/* line 773, ../../resources/assets/sass/app.scss */
 .school {
   background-image: url("../images/school.jpg");
   height: 50%;
 }
 @media screen and (min-width: 768px) {
-  /* line 769, ../../resources/assets/sass/app.scss */
+  /* line 773, ../../resources/assets/sass/app.scss */
   .school {
     min-height: 50%;
   }
 }
 
-/* line 779, ../../resources/assets/sass/app.scss */
+/* line 783, ../../resources/assets/sass/app.scss */
 #random {
   position: absolute;
   margin-top: 25px;
@@ -864,7 +868,7 @@ footer p {
   width: 250px;
   height: 40px;
 }
-/* line 789, ../../resources/assets/sass/app.scss */
+/* line 793, ../../resources/assets/sass/app.scss */
 #random p {
   color: black;
   position: absolute;
@@ -872,14 +876,14 @@ footer p {
   transform: translateY(-50%);
   font-size: 14px;
 }
-/* line 796, ../../resources/assets/sass/app.scss */
+/* line 800, ../../resources/assets/sass/app.scss */
 #random a {
   display: block;
   width: 100%;
   height: 100%;
 }
 
-/* line 803, ../../resources/assets/sass/app.scss */
+/* line 807, ../../resources/assets/sass/app.scss */
 #url {
   position: relative;
   background-image: url("../images/url.svg");
@@ -889,7 +893,7 @@ footer p {
   height: 40px;
   cursor: pointer;
 }
-/* line 814, ../../resources/assets/sass/app.scss */
+/* line 818, ../../resources/assets/sass/app.scss */
 #url p {
   color: black;
   position: absolute;
@@ -898,35 +902,35 @@ footer p {
   font-size: 12px;
   margin-left: 65px;
 }
-/* line 822, ../../resources/assets/sass/app.scss */
+/* line 826, ../../resources/assets/sass/app.scss */
 #url a {
   display: block;
   width: 100%;
   height: 100%;
 }
 
-/* line 829, ../../resources/assets/sass/app.scss */
+/* line 833, ../../resources/assets/sass/app.scss */
 #school, #school_detail {
   margin-bottom: 50px;
 }
-/* line 831, ../../resources/assets/sass/app.scss */
+/* line 835, ../../resources/assets/sass/app.scss */
 #school .container, #school_detail .container {
   padding-left: 0;
   padding-right: 0;
 }
 @media screen and (min-width: 768px) {
-  /* line 834, ../../resources/assets/sass/app.scss */
+  /* line 838, ../../resources/assets/sass/app.scss */
   #school .container .row, #school_detail .container .row {
     display: flex;
     flex-wrap: wrap;
   }
 }
-/* line 839, ../../resources/assets/sass/app.scss */
+/* line 843, ../../resources/assets/sass/app.scss */
 #school .container .row .col-md-3, #school_detail .container .row .col-md-3 {
   height: 100%;
   margin-bottom: 25px;
 }
-/* line 842, ../../resources/assets/sass/app.scss */
+/* line 846, ../../resources/assets/sass/app.scss */
 #school .container .row .col-md-3 .shadow, #school_detail .container .row .col-md-3 .shadow {
   cursor: pointer;
   -moz-box-shadow: 1px 1px 1px 0px #8d9092;
@@ -935,20 +939,20 @@ footer p {
   display: block;
 }
 @media screen and (min-width: 768px) {
-  /* line 839, ../../resources/assets/sass/app.scss */
+  /* line 843, ../../resources/assets/sass/app.scss */
   #school .container .row .col-md-3, #school_detail .container .row .col-md-3 {
     width: 33.33%;
     padding-left: 15px;
     padding-right: 15px;
   }
 }
-/* line 852, ../../resources/assets/sass/app.scss */
+/* line 856, ../../resources/assets/sass/app.scss */
 #school .container .row .col-md-3 .faculty_photo, #school_detail .container .row .col-md-3 .faculty_photo {
   height: 250px;
   position: rellative;
   z-index: 0;
 }
-/* line 856, ../../resources/assets/sass/app.scss */
+/* line 860, ../../resources/assets/sass/app.scss */
 #school .container .row .col-md-3 .faculty_photo .heart, #school .container .row .col-md-3 .faculty_photo .fullHeart, #school_detail .container .row .col-md-3 .faculty_photo .heart, #school_detail .container .row .col-md-3 .faculty_photo .fullHeart {
   background-size: contain;
   background-repeat: no-repeat;
@@ -960,15 +964,15 @@ footer p {
   z-index: 1;
   cursor: pointer;
 }
-/* line 868, ../../resources/assets/sass/app.scss */
+/* line 872, ../../resources/assets/sass/app.scss */
 #school .container .row .col-md-3 .faculty_photo .heart, #school_detail .container .row .col-md-3 .faculty_photo .heart {
   background-image: url("../images/borderHeart.svg");
 }
-/* line 872, ../../resources/assets/sass/app.scss */
+/* line 876, ../../resources/assets/sass/app.scss */
 #school .container .row .col-md-3 .faculty_photo .fullHeart, #school_detail .container .row .col-md-3 .faculty_photo .fullHeart {
   background-image: url("../images/heart.svg");
 }
-/* line 876, ../../resources/assets/sass/app.scss */
+/* line 880, ../../resources/assets/sass/app.scss */
 #school .container .row .col-md-3 .faculty_photo .f_photo, #school_detail .container .row .col-md-3 .faculty_photo .f_photo {
   background-repeat: no-repeat;
   background-size: cover;
@@ -976,7 +980,7 @@ footer p {
   width: 100%;
   height: 100%;
 }
-/* line 885, ../../resources/assets/sass/app.scss */
+/* line 889, ../../resources/assets/sass/app.scss */
 #school .container .row .col-md-3 .text, #school_detail .container .row .col-md-3 .text {
   text-align: center;
   height: 100px;
@@ -984,42 +988,42 @@ footer p {
   align-items: center;
   justify-content: center;
 }
-/* line 891, ../../resources/assets/sass/app.scss */
+/* line 895, ../../resources/assets/sass/app.scss */
 #school .container .row .col-md-3 .text p, #school_detail .container .row .col-md-3 .text p {
   width: 75%;
 }
-/* line 893, ../../resources/assets/sass/app.scss */
+/* line 897, ../../resources/assets/sass/app.scss */
 #school .container .row .col-md-3 .text p a, #school_detail .container .row .col-md-3 .text p a {
   text-decoration: none;
 }
 
-/* line 903, ../../resources/assets/sass/app.scss */
+/* line 907, ../../resources/assets/sass/app.scss */
 .testimonial {
   background-image: url("../images/testimonials.jpg");
   height: 50%;
 }
 @media screen and (min-width: 768px) {
-  /* line 903, ../../resources/assets/sass/app.scss */
+  /* line 907, ../../resources/assets/sass/app.scss */
   .testimonial {
     min-height: 50%;
   }
 }
 
-/* line 913, ../../resources/assets/sass/app.scss */
+/* line 917, ../../resources/assets/sass/app.scss */
 #testimonials .container, #events_gate15 .container {
   padding: 0 0;
 }
-/* line 916, ../../resources/assets/sass/app.scss */
+/* line 920, ../../resources/assets/sass/app.scss */
 #testimonials .container .row [class*='col-'], #events_gate15 .container .row [class*='col-'] {
   padding-left: 15px;
   padding-right: 15px;
   margin-bottom: 75px;
 }
-/* line 921, ../../resources/assets/sass/app.scss */
+/* line 925, ../../resources/assets/sass/app.scss */
 #testimonials .container .row [class*='col-']:nth-child(even) h2, #events_gate15 .container .row [class*='col-']:nth-child(even) h2 {
   background-color: #8d9092 !important;
 }
-/* line 926, ../../resources/assets/sass/app.scss */
+/* line 930, ../../resources/assets/sass/app.scss */
 #testimonials .container .row [class*='col-'] .photo, #events_gate15 .container .row [class*='col-'] .photo {
   position: relative;
   background-size: cover;
@@ -1027,7 +1031,7 @@ footer p {
   height: 225px;
   display: block;
 }
-/* line 933, ../../resources/assets/sass/app.scss */
+/* line 937, ../../resources/assets/sass/app.scss */
 #testimonials .container .row [class*='col-'] .photo .bv-info, #events_gate15 .container .row [class*='col-'] .photo .bv-info {
   position: absolute;
   right: -30%;
@@ -1036,13 +1040,13 @@ footer p {
   height: 40%;
 }
 @media screen and (min-width: 768px) {
-  /* line 933, ../../resources/assets/sass/app.scss */
+  /* line 937, ../../resources/assets/sass/app.scss */
   #testimonials .container .row [class*='col-'] .photo .bv-info, #events_gate15 .container .row [class*='col-'] .photo .bv-info {
     right: -35%;
     width: 70%;
   }
 }
-/* line 945, ../../resources/assets/sass/app.scss */
+/* line 949, ../../resources/assets/sass/app.scss */
 #testimonials .container .row [class*='col-'] .photo .bv-info h2, #events_gate15 .container .row [class*='col-'] .photo .bv-info h2 {
   font-size: 12px;
   letter-spacing: 1px;
@@ -1056,18 +1060,18 @@ footer p {
   text-align: center;
 }
 @media screen and (min-width: 768px) {
-  /* line 945, ../../resources/assets/sass/app.scss */
+  /* line 949, ../../resources/assets/sass/app.scss */
   #testimonials .container .row [class*='col-'] .photo .bv-info h2, #events_gate15 .container .row [class*='col-'] .photo .bv-info h2 {
     font-size: 12px;
   }
 }
-/* line 961, ../../resources/assets/sass/app.scss */
+/* line 965, ../../resources/assets/sass/app.scss */
 #testimonials .container .row [class*='col-'] .photo span, #events_gate15 .container .row [class*='col-'] .photo span {
   height: 20px;
   bottom: -20px;
   position: absolute;
 }
-/* line 968, ../../resources/assets/sass/app.scss */
+/* line 972, ../../resources/assets/sass/app.scss */
 #testimonials .container .row [class*='col-'] p, #events_gate15 .container .row [class*='col-'] p {
   color: black;
   font-size: 16px;
@@ -1076,7 +1080,7 @@ footer p {
   width: 75%;
 }
 
-/* line 983, ../../resources/assets/sass/app.scss */
+/* line 987, ../../resources/assets/sass/app.scss */
 table td input {
   display: inline-block;
   background-color: #007fa3;
@@ -1085,78 +1089,78 @@ table td input {
   padding: 5px;
   margin-left: 10px;
 }
-/* line 992, ../../resources/assets/sass/app.scss */
+/* line 996, ../../resources/assets/sass/app.scss */
 table td, table th {
   padding: 15px !important;
 }
 
-/* line 997, ../../resources/assets/sass/app.scss */
+/* line 1001, ../../resources/assets/sass/app.scss */
 #school_detail {
   margin: 100px 0;
 }
 
-/* line 1004, ../../resources/assets/sass/app.scss */
+/* line 1008, ../../resources/assets/sass/app.scss */
 #school_detail nav ul li {
   font-size: 400;
   list-style: none;
   display: inline-block;
 }
-/* line 1008, ../../resources/assets/sass/app.scss */
+/* line 1012, ../../resources/assets/sass/app.scss */
 #school_detail nav ul li a {
   color: black;
 }
-/* line 1010, ../../resources/assets/sass/app.scss */
+/* line 1014, ../../resources/assets/sass/app.scss */
 #school_detail nav ul li a:hover {
   text-decoration: none;
   color: #007fa3;
 }
 
-/* line 1021, ../../resources/assets/sass/app.scss */
+/* line 1025, ../../resources/assets/sass/app.scss */
 .event_bg {
   background-image: url("../images/events.jpg");
   background-position: center 50%;
   height: 50%;
 }
 @media screen and (min-width: 768px) {
-  /* line 1021, ../../resources/assets/sass/app.scss */
+  /* line 1025, ../../resources/assets/sass/app.scss */
   .event_bg {
     min-height: 50%;
   }
 }
 
-/* line 1031, ../../resources/assets/sass/app.scss */
+/* line 1035, ../../resources/assets/sass/app.scss */
 .event_detail_bg {
   background-position: center 50%;
   height: 50%;
 }
 @media screen and (min-width: 768px) {
-  /* line 1031, ../../resources/assets/sass/app.scss */
+  /* line 1035, ../../resources/assets/sass/app.scss */
   .event_detail_bg {
     min-height: 50%;
   }
 }
 
-/* line 1040, ../../resources/assets/sass/app.scss */
+/* line 1044, ../../resources/assets/sass/app.scss */
 .filter {
   width: 75%;
   margin: 100px auto 0 auto;
 }
-/* line 1043, ../../resources/assets/sass/app.scss */
+/* line 1047, ../../resources/assets/sass/app.scss */
 .filter .container {
   padding: 0;
 }
-/* line 1045, ../../resources/assets/sass/app.scss */
+/* line 1049, ../../resources/assets/sass/app.scss */
 .filter .container h1 {
   font-size: 18px;
   margin-bottom: 10px;
   color: black;
 }
-/* line 1050, ../../resources/assets/sass/app.scss */
+/* line 1054, ../../resources/assets/sass/app.scss */
 .filter .container ul {
   list-style: none;
   margin: 0;
 }
-/* line 1053, ../../resources/assets/sass/app.scss */
+/* line 1057, ../../resources/assets/sass/app.scss */
 .filter .container ul li {
   background-color: #8d9092;
   display: inline-block;
@@ -1164,32 +1168,32 @@ table td, table th {
   font-size: 10px;
   margin: 0 5px 10px 0;
 }
-/* line 1060, ../../resources/assets/sass/app.scss */
+/* line 1064, ../../resources/assets/sass/app.scss */
 .filter .container ul li a {
   display: block;
   color: white;
   text-decoration: none;
   padding: 10px 20px;
 }
-/* line 1067, ../../resources/assets/sass/app.scss */
+/* line 1071, ../../resources/assets/sass/app.scss */
 .filter .container ul li:hover {
   background-color: #007fa3;
 }
 
-/* line 1076, ../../resources/assets/sass/app.scss */
+/* line 1080, ../../resources/assets/sass/app.scss */
 #breadcrumb {
   list-style: none;
   display: inline-block;
 }
-/* line 1080, ../../resources/assets/sass/app.scss */
+/* line 1084, ../../resources/assets/sass/app.scss */
 #breadcrumb .icon {
   font-size: 14px;
 }
-/* line 1084, ../../resources/assets/sass/app.scss */
+/* line 1088, ../../resources/assets/sass/app.scss */
 #breadcrumb li {
   float: left;
 }
-/* line 1086, ../../resources/assets/sass/app.scss */
+/* line 1090, ../../resources/assets/sass/app.scss */
 #breadcrumb li a {
   color: #FFF !important;
   display: block;
@@ -1203,18 +1207,18 @@ table td, table th {
   margin-right: 23px;
   font-family: "Sun_antwerpen";
 }
-/* line 1100, ../../resources/assets/sass/app.scss */
+/* line 1104, ../../resources/assets/sass/app.scss */
 #breadcrumb li:first-child a {
   padding-left: 15px;
   -moz-border-radius: 4px 0 0 4px;
   -webkit-border-radius: 4px;
   border-radius: 4px 0 0 4px;
 }
-/* line 1103, ../../resources/assets/sass/app.scss */
+/* line 1107, ../../resources/assets/sass/app.scss */
 #breadcrumb li:first-child a:before {
   border: none;
 }
-/* line 1109, ../../resources/assets/sass/app.scss */
+/* line 1113, ../../resources/assets/sass/app.scss */
 #breadcrumb li:last-child a {
   padding-right: 15px;
   color: #007fa3 !important;
@@ -1223,30 +1227,30 @@ table td, table th {
   -webkit-border-radius: 0;
   border-radius: 0 4px 4px 0;
 }
-/* line 1114, ../../resources/assets/sass/app.scss */
+/* line 1118, ../../resources/assets/sass/app.scss */
 #breadcrumb li:last-child a:before {
   border-color: white;
   border-left-color: transparent;
 }
-/* line 1118, ../../resources/assets/sass/app.scss */
+/* line 1122, ../../resources/assets/sass/app.scss */
 #breadcrumb li:last-child a:after {
   border-left-color: white;
   border-color: white;
 }
-/* line 1122, ../../resources/assets/sass/app.scss */
+/* line 1126, ../../resources/assets/sass/app.scss */
 #breadcrumb li:last-child a:hover {
   background-color: white;
 }
-/* line 1125, ../../resources/assets/sass/app.scss */
+/* line 1129, ../../resources/assets/sass/app.scss */
 #breadcrumb li:last-child a:hover:before {
   border-color: white;
   border-left-color: transparent;
 }
-/* line 1129, ../../resources/assets/sass/app.scss */
+/* line 1133, ../../resources/assets/sass/app.scss */
 #breadcrumb li:last-child a:hover:after {
   border-left-color: white;
 }
-/* line 1137, ../../resources/assets/sass/app.scss */
+/* line 1141, ../../resources/assets/sass/app.scss */
 #breadcrumb li a:before, #breadcrumb li a:after {
   content: "";
   position: absolute;
@@ -1256,45 +1260,45 @@ table td, table th {
   width: 0;
   height: 0;
 }
-/* line 1147, ../../resources/assets/sass/app.scss */
+/* line 1151, ../../resources/assets/sass/app.scss */
 #breadcrumb li a:before {
   left: -20px;
   border-left-color: transparent;
 }
-/* line 1151, ../../resources/assets/sass/app.scss */
+/* line 1155, ../../resources/assets/sass/app.scss */
 #breadcrumb li a:after {
   left: 100%;
   border-color: transparent;
   border-left-color: #007fa3;
 }
-/* line 1156, ../../resources/assets/sass/app.scss */
+/* line 1160, ../../resources/assets/sass/app.scss */
 #breadcrumb li a:hover {
   background-color: #8d9092;
 }
-/* line 1159, ../../resources/assets/sass/app.scss */
+/* line 1163, ../../resources/assets/sass/app.scss */
 #breadcrumb li a:hover:before {
   border-color: #8d9092;
   border-left-color: transparent;
 }
-/* line 1163, ../../resources/assets/sass/app.scss */
+/* line 1167, ../../resources/assets/sass/app.scss */
 #breadcrumb li a:hover:after {
   border-left-color: #8d9092;
 }
-/* line 1167, ../../resources/assets/sass/app.scss */
+/* line 1171, ../../resources/assets/sass/app.scss */
 #breadcrumb li a:active {
   background-color: #007fa3;
 }
-/* line 1170, ../../resources/assets/sass/app.scss */
+/* line 1174, ../../resources/assets/sass/app.scss */
 #breadcrumb li a:active:before {
   border-color: #007fa3;
   border-left-color: transparent;
 }
-/* line 1174, ../../resources/assets/sass/app.scss */
+/* line 1178, ../../resources/assets/sass/app.scss */
 #breadcrumb li a:active:after {
   border-left-color: #007fa3;
 }
 
-/* line 1182, ../../resources/assets/sass/app.scss */
+/* line 1186, ../../resources/assets/sass/app.scss */
 .AP, .KdG, .HZS, .UA {
   background-size: contain;
   background-repeat: no-repeat;
@@ -1303,34 +1307,34 @@ table td, table th {
   height: 100%;
 }
 
-/* line 1190, ../../resources/assets/sass/app.scss */
+/* line 1194, ../../resources/assets/sass/app.scss */
 .AP {
   background-image: url("../images/school/ap.jpg");
 }
 
-/* line 1194, ../../resources/assets/sass/app.scss */
+/* line 1198, ../../resources/assets/sass/app.scss */
 .KdG {
   background-image: url("../images/school/kdg.png");
 }
 
-/* line 1198, ../../resources/assets/sass/app.scss */
+/* line 1202, ../../resources/assets/sass/app.scss */
 .HZS {
   background-image: url("../images/school/hzs.jpg");
 }
 
-/* line 1202, ../../resources/assets/sass/app.scss */
+/* line 1206, ../../resources/assets/sass/app.scss */
 .UA {
   background-image: url("../images/school/ua.png");
 }
 
-/* line 1210, ../../resources/assets/sass/app.scss */
+/* line 1214, ../../resources/assets/sass/app.scss */
 #sortSchools .container .row .shadow .school_photo {
   display: block;
   height: 250px;
   width: 50%;
   margin: 0 auto;
 }
-/* line 1217, ../../resources/assets/sass/app.scss */
+/* line 1221, ../../resources/assets/sass/app.scss */
 #sortSchools .container .row .shadow .text {
   text-align: center;
 }
