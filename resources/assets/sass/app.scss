@@ -1011,7 +1011,10 @@ footer {
 
 #testimonials, #events_gate15 {
   .container {
-    padding: 0 0;
+    padding: 0 15px;
+    @media screen and (min-width: $break-medium) {
+      padding: 0 0;
+    }
     .row {
       [class*='col-'] {
         padding-left: 15px;
@@ -1138,10 +1141,13 @@ table {
 }
 
 .filter {
-  width: 75%;
   margin: 100px auto 0 auto;
+  width: 100%;
   .container {
-    padding: 0;
+    padding: 0 15px;
+    @media screen and (min-width: $break-medium) {
+      padding: 0;
+    }
     h1 {
       font-size: 18px;
       margin-bottom: 10px;
