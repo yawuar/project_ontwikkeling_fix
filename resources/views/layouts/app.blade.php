@@ -70,6 +70,8 @@
   @yield('content')
   <div class="dummy"></div>
   <!-- Scripts -->
+  <div id="skyline">
+  </div>
   <footer>
     <p>&copy; 2017 Antwerpen.be | Privacy &amp; gebruiksvoorwaarden <a href="/cms">admin</a></p>
   </footer>

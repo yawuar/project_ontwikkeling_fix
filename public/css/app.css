@@ -733,14 +733,21 @@ header #search .input-group-btn .btn .glyphicon {
 }
 
 /* line 676, ../../resources/assets/sass/app.scss */
-footer {
+#skyline {
   background-image: url("../images/skyline.png");
   background-repeat: no-repeat;
   background-size: cover;
   height: 134px;
   width: 100%;
+  margin-top: 50px;
 }
-/* line 683, ../../resources/assets/sass/app.scss */
+
+/* line 685, ../../resources/assets/sass/app.scss */
+footer {
+  width: 100%;
+  background-color: black;
+}
+/* line 689, ../../resources/assets/sass/app.scss */
 footer p {
   font-size: 16px;
   text-align: center;
@@ -749,46 +756,46 @@ footer p {
   padding: 20px;
 }
 
-/* line 693, ../../resources/assets/sass/app.scss */
+/* line 699, ../../resources/assets/sass/app.scss */
 .city {
   background-image: url("../images/city.jpg");
   background-position: center 85%;
   height: 50%;
 }
 @media screen and (min-width: 768px) {
-  /* line 693, ../../resources/assets/sass/app.scss */
+  /* line 699, ../../resources/assets/sass/app.scss */
   .city {
     min-height: 50%;
   }
 }
 
-/* line 703, ../../resources/assets/sass/app.scss */
+/* line 709, ../../resources/assets/sass/app.scss */
 #events {
   margin-bottom: 50px;
 }
-/* line 706, ../../resources/assets/sass/app.scss */
+/* line 712, ../../resources/assets/sass/app.scss */
 #events .col-xs-12:nth-child(even) .event {
   margin-left: 0;
 }
 @media screen and (min-width: 768px) {
-  /* line 706, ../../resources/assets/sass/app.scss */
+  /* line 712, ../../resources/assets/sass/app.scss */
   #events .col-xs-12:nth-child(even) .event {
     margin-left: 15%;
   }
 }
-/* line 714, ../../resources/assets/sass/app.scss */
+/* line 720, ../../resources/assets/sass/app.scss */
 #events .text {
   margin-top: 25px;
 }
-/* line 716, ../../resources/assets/sass/app.scss */
+/* line 722, ../../resources/assets/sass/app.scss */
 #events .text p {
   color: black;
 }
-/* line 720, ../../resources/assets/sass/app.scss */
+/* line 726, ../../resources/assets/sass/app.scss */
 #events .col-md-6 {
   margin-bottom: 50px;
 }
-/* line 723, ../../resources/assets/sass/app.scss */
+/* line 729, ../../resources/assets/sass/app.scss */
 #events .event {
   position: relative;
   background-size: cover;
@@ -797,13 +804,13 @@ footer p {
   margin-bottom: 100px;
 }
 @media screen and (min-width: 768px) {
-  /* line 723, ../../resources/assets/sass/app.scss */
+  /* line 729, ../../resources/assets/sass/app.scss */
   #events .event {
     width: 300px;
     height: 300px;
   }
 }
-/* line 735, ../../resources/assets/sass/app.scss */
+/* line 741, ../../resources/assets/sass/app.scss */
 #events .event .bv-info {
   position: absolute;
   right: -30%;
@@ -812,20 +819,20 @@ footer p {
   height: 40%;
 }
 @media screen and (min-width: 768px) {
-  /* line 735, ../../resources/assets/sass/app.scss */
+  /* line 741, ../../resources/assets/sass/app.scss */
   #events .event .bv-info {
     right: -40%;
     width: 80%;
   }
 }
-/* line 747, ../../resources/assets/sass/app.scss */
+/* line 753, ../../resources/assets/sass/app.scss */
 #events .event .bv-info .date {
   font-family: "Sun_antwerpen";
   color: #8d9092;
   display: block;
   text-align: right;
 }
-/* line 754, ../../resources/assets/sass/app.scss */
+/* line 760, ../../resources/assets/sass/app.scss */
 #events .event .bv-info h2 {
   font-size: 17px;
   letter-spacing: 1px;
@@ -838,25 +845,25 @@ footer p {
   align-items: center;
 }
 @media screen and (min-width: 768px) {
-  /* line 754, ../../resources/assets/sass/app.scss */
+  /* line 760, ../../resources/assets/sass/app.scss */
   #events .event .bv-info h2 {
     font-size: 22px;
   }
 }
 
-/* line 773, ../../resources/assets/sass/app.scss */
+/* line 779, ../../resources/assets/sass/app.scss */
 .school {
   background-image: url("../images/school.jpg");
   height: 50%;
 }
 @media screen and (min-width: 768px) {
-  /* line 773, ../../resources/assets/sass/app.scss */
+  /* line 779, ../../resources/assets/sass/app.scss */
   .school {
     min-height: 50%;
   }
 }
 
-/* line 783, ../../resources/assets/sass/app.scss */
+/* line 789, ../../resources/assets/sass/app.scss */
 #random {
   position: absolute;
   margin-top: 25px;
@@ -868,7 +875,7 @@ footer p {
   width: 250px;
   height: 40px;
 }
-/* line 793, ../../resources/assets/sass/app.scss */
+/* line 799, ../../resources/assets/sass/app.scss */
 #random p {
   color: black;
   position: absolute;
@@ -876,14 +883,14 @@ footer p {
   transform: translateY(-50%);
   font-size: 14px;
 }
-/* line 800, ../../resources/assets/sass/app.scss */
+/* line 806, ../../resources/assets/sass/app.scss */
 #random a {
   display: block;
   width: 100%;
   height: 100%;
 }
 
-/* line 807, ../../resources/assets/sass/app.scss */
+/* line 813, ../../resources/assets/sass/app.scss */
 #url {
   position: relative;
   background-image: url("../images/url.svg");
@@ -893,7 +900,7 @@ footer p {
   height: 40px;
   cursor: pointer;
 }
-/* line 818, ../../resources/assets/sass/app.scss */
+/* line 824, ../../resources/assets/sass/app.scss */
 #url p {
   color: black;
   position: absolute;
@@ -902,35 +909,35 @@ footer p {
   font-size: 12px;
   margin-left: 65px;
 }
-/* line 826, ../../resources/assets/sass/app.scss */
+/* line 832, ../../resources/assets/sass/app.scss */
 #url a {
   display: block;
   width: 100%;
   height: 100%;
 }
 
-/* line 833, ../../resources/assets/sass/app.scss */
+/* line 839, ../../resources/assets/sass/app.scss */
 #school, #school_detail {
   margin-bottom: 50px;
 }
-/* line 835, ../../resources/assets/sass/app.scss */
+/* line 841, ../../resources/assets/sass/app.scss */
 #school .container, #school_detail .container {
   padding-left: 0;
   padding-right: 0;
 }
 @media screen and (min-width: 768px) {
-  /* line 838, ../../resources/assets/sass/app.scss */
+  /* line 844, ../../resources/assets/sass/app.scss */
   #school .container .row, #school_detail .container .row {
     display: flex;
     flex-wrap: wrap;
   }
 }
-/* line 843, ../../resources/assets/sass/app.scss */
+/* line 849, ../../resources/assets/sass/app.scss */
 #school .container .row .col-md-3, #school_detail .container .row .col-md-3 {
   height: 100%;
   margin-bottom: 25px;
 }
-/* line 846, ../../resources/assets/sass/app.scss */
+/* line 852, ../../resources/assets/sass/app.scss */
 #school .container .row .col-md-3 .shadow, #school_detail .container .row .col-md-3 .shadow {
   cursor: pointer;
   -moz-box-shadow: 1px 1px 1px 0px #8d9092;
@@ -939,20 +946,20 @@ footer p {
   display: block;
 }
 @media screen and (min-width: 768px) {
-  /* line 843, ../../resources/assets/sass/app.scss */
+  /* line 849, ../../resources/assets/sass/app.scss */
   #school .container .row .col-md-3, #school_detail .container .row .col-md-3 {
     width: 33.33%;
     padding-left: 15px;
     padding-right: 15px;
   }
 }
-/* line 856, ../../resources/assets/sass/app.scss */
+/* line 862, ../../resources/assets/sass/app.scss */
 #school .container .row .col-md-3 .faculty_photo, #school_detail .container .row .col-md-3 .faculty_photo {
   height: 250px;
   position: rellative;
   z-index: 0;
 }
-/* line 860, ../../resources/assets/sass/app.scss */
+/* line 866, ../../resources/assets/sass/app.scss */
 #school .container .row .col-md-3 .faculty_photo .heart, #school .container .row .col-md-3 .faculty_photo .fullHeart, #school_detail .container .row .col-md-3 .faculty_photo .heart, #school_detail .container .row .col-md-3 .faculty_photo .fullHeart {
   background-size: contain;
   background-repeat: no-repeat;
@@ -964,15 +971,15 @@ footer p {
   z-index: 1;
   cursor: pointer;
 }
-/* line 872, ../../resources/assets/sass/app.scss */
+/* line 878, ../../resources/assets/sass/app.scss */
 #school .container .row .col-md-3 .faculty_photo .heart, #school_detail .container .row .col-md-3 .faculty_photo .heart {
   background-image: url("../images/borderHeart.svg");
 }
-/* line 876, ../../resources/assets/sass/app.scss */
+/* line 882, ../../resources/assets/sass/app.scss */
 #school .container .row .col-md-3 .faculty_photo .fullHeart, #school_detail .container .row .col-md-3 .faculty_photo .fullHeart {
   background-image: url("../images/heart.svg");
 }
-/* line 880, ../../resources/assets/sass/app.scss */
+/* line 886, ../../resources/assets/sass/app.scss */
 #school .container .row .col-md-3 .faculty_photo .f_photo, #school_detail .container .row .col-md-3 .faculty_photo .f_photo {
   background-repeat: no-repeat;
   background-size: cover;
@@ -980,7 +987,7 @@ footer p {
   width: 100%;
   height: 100%;
 }
-/* line 889, ../../resources/assets/sass/app.scss */
+/* line 895, ../../resources/assets/sass/app.scss */
 #school .container .row .col-md-3 .text, #school_detail .container .row .col-md-3 .text {
   text-align: center;
   height: 100px;
@@ -988,42 +995,42 @@ footer p {
   align-items: center;
   justify-content: center;
 }
-/* line 895, ../../resources/assets/sass/app.scss */
+/* line 901, ../../resources/assets/sass/app.scss */
 #school .container .row .col-md-3 .text p, #school_detail .container .row .col-md-3 .text p {
   width: 75%;
 }
-/* line 897, ../../resources/assets/sass/app.scss */
+/* line 903, ../../resources/assets/sass/app.scss */
 #school .container .row .col-md-3 .text p a, #school_detail .container .row .col-md-3 .text p a {
   text-decoration: none;
 }
 
-/* line 907, ../../resources/assets/sass/app.scss */
+/* line 913, ../../resources/assets/sass/app.scss */
 .testimonial {
   background-image: url("../images/testimonials.jpg");
   height: 50%;
 }
 @media screen and (min-width: 768px) {
-  /* line 907, ../../resources/assets/sass/app.scss */
+  /* line 913, ../../resources/assets/sass/app.scss */
   .testimonial {
     min-height: 50%;
   }
 }
 
-/* line 917, ../../resources/assets/sass/app.scss */
+/* line 923, ../../resources/assets/sass/app.scss */
 #testimonials .container, #events_gate15 .container {
   padding: 0 0;
 }
-/* line 920, ../../resources/assets/sass/app.scss */
+/* line 926, ../../resources/assets/sass/app.scss */
 #testimonials .container .row [class*='col-'], #events_gate15 .container .row [class*='col-'] {
   padding-left: 15px;
   padding-right: 15px;
   margin-bottom: 75px;
 }
-/* line 925, ../../resources/assets/sass/app.scss */
+/* line 931, ../../resources/assets/sass/app.scss */
 #testimonials .container .row [class*='col-']:nth-child(even) h2, #events_gate15 .container .row [class*='col-']:nth-child(even) h2 {
   background-color: #8d9092 !important;
 }
-/* line 930, ../../resources/assets/sass/app.scss */
+/* line 936, ../../resources/assets/sass/app.scss */
 #testimonials .container .row [class*='col-'] .photo, #events_gate15 .container .row [class*='col-'] .photo {
   position: relative;
   background-size: cover;
@@ -1031,7 +1038,7 @@ footer p {
   height: 225px;
   display: block;
 }
-/* line 937, ../../resources/assets/sass/app.scss */
+/* line 943, ../../resources/assets/sass/app.scss */
 #testimonials .container .row [class*='col-'] .photo .bv-info, #events_gate15 .container .row [class*='col-'] .photo .bv-info {
   position: absolute;
   right: -30%;
@@ -1040,13 +1047,13 @@ footer p {
   height: 40%;
 }
 @media screen and (min-width: 768px) {
-  /* line 937, ../../resources/assets/sass/app.scss */
+  /* line 943, ../../resources/assets/sass/app.scss */
   #testimonials .container .row [class*='col-'] .photo .bv-info, #events_gate15 .container .row [class*='col-'] .photo .bv-info {
     right: -35%;
     width: 70%;
   }
 }
-/* line 949, ../../resources/assets/sass/app.scss */
+/* line 955, ../../resources/assets/sass/app.scss */
 #testimonials .container .row [class*='col-'] .photo .bv-info h2, #events_gate15 .container .row [class*='col-'] .photo .bv-info h2 {
   font-size: 12px;
   letter-spacing: 1px;
@@ -1060,18 +1067,18 @@ footer p {
   text-align: center;
 }
 @media screen and (min-width: 768px) {
-  /* line 949, ../../resources/assets/sass/app.scss */
+  /* line 955, ../../resources/assets/sass/app.scss */
   #testimonials .container .row [class*='col-'] .photo .bv-info h2, #events_gate15 .container .row [class*='col-'] .photo .bv-info h2 {
     font-size: 12px;
   }
 }
-/* line 965, ../../resources/assets/sass/app.scss */
+/* line 971, ../../resources/assets/sass/app.scss */
 #testimonials .container .row [class*='col-'] .photo span, #events_gate15 .container .row [class*='col-'] .photo span {
   height: 20px;
   bottom: -20px;
   position: absolute;
 }
-/* line 972, ../../resources/assets/sass/app.scss */
+/* line 978, ../../resources/assets/sass/app.scss */
 #testimonials .container .row [class*='col-'] p, #events_gate15 .container .row [class*='col-'] p {
   color: black;
   font-size: 16px;
@@ -1080,7 +1087,7 @@ footer p {
   width: 75%;
 }
 
-/* line 987, ../../resources/assets/sass/app.scss */
+/* line 993, ../../resources/assets/sass/app.scss */
 table td input {
   display: inline-block;
   background-color: #007fa3;
@@ -1089,78 +1096,78 @@ table td input {
   padding: 5px;
   margin-left: 10px;
 }
-/* line 996, ../../resources/assets/sass/app.scss */
+/* line 1002, ../../resources/assets/sass/app.scss */
 table td, table th {
   padding: 15px !important;
 }
 
-/* line 1001, ../../resources/assets/sass/app.scss */
+/* line 1007, ../../resources/assets/sass/app.scss */
 #school_detail {
   margin: 100px 0;
 }
 
-/* line 1008, ../../resources/assets/sass/app.scss */
+/* line 1014, ../../resources/assets/sass/app.scss */
 #school_detail nav ul li {
   font-size: 400;
   list-style: none;
   display: inline-block;
 }
-/* line 1012, ../../resources/assets/sass/app.scss */
+/* line 1018, ../../resources/assets/sass/app.scss */
 #school_detail nav ul li a {
   color: black;
 }
-/* line 1014, ../../resources/assets/sass/app.scss */
+/* line 1020, ../../resources/assets/sass/app.scss */
 #school_detail nav ul li a:hover {
   text-decoration: none;
   color: #007fa3;
 }
 
-/* line 1025, ../../resources/assets/sass/app.scss */
+/* line 1031, ../../resources/assets/sass/app.scss */
 .event_bg {
   background-image: url("../images/events.jpg");
   background-position: center 50%;
   height: 50%;
 }
 @media screen and (min-width: 768px) {
-  /* line 1025, ../../resources/assets/sass/app.scss */
+  /* line 1031, ../../resources/assets/sass/app.scss */
   .event_bg {
     min-height: 50%;
   }
 }
 
-/* line 1035, ../../resources/assets/sass/app.scss */
+/* line 1041, ../../resources/assets/sass/app.scss */
 .event_detail_bg {
   background-position: center 50%;
   height: 50%;
 }
 @media screen and (min-width: 768px) {
-  /* line 1035, ../../resources/assets/sass/app.scss */
+  /* line 1041, ../../resources/assets/sass/app.scss */
   .event_detail_bg {
     min-height: 50%;
   }
 }
 
-/* line 1044, ../../resources/assets/sass/app.scss */
+/* line 1050, ../../resources/assets/sass/app.scss */
 .filter {
   width: 75%;
   margin: 100px auto 0 auto;
 }
-/* line 1047, ../../resources/assets/sass/app.scss */
+/* line 1053, ../../resources/assets/sass/app.scss */
 .filter .container {
   padding: 0;
 }
-/* line 1049, ../../resources/assets/sass/app.scss */
+/* line 1055, ../../resources/assets/sass/app.scss */
 .filter .container h1 {
   font-size: 18px;
   margin-bottom: 10px;
   color: black;
 }
-/* line 1054, ../../resources/assets/sass/app.scss */
+/* line 1060, ../../resources/assets/sass/app.scss */
 .filter .container ul {
   list-style: none;
   margin: 0;
 }
-/* line 1057, ../../resources/assets/sass/app.scss */
+/* line 1063, ../../resources/assets/sass/app.scss */
 .filter .container ul li {
   background-color: #8d9092;
   display: inline-block;
@@ -1168,32 +1175,32 @@ table td, table th {
   font-size: 10px;
   margin: 0 5px 10px 0;
 }
-/* line 1064, ../../resources/assets/sass/app.scss */
+/* line 1070, ../../resources/assets/sass/app.scss */
 .filter .container ul li a {
   display: block;
   color: white;
   text-decoration: none;
   padding: 10px 20px;
 }
-/* line 1071, ../../resources/assets/sass/app.scss */
+/* line 1077, ../../resources/assets/sass/app.scss */
 .filter .container ul li:hover {
   background-color: #007fa3;
 }
 
-/* line 1080, ../../resources/assets/sass/app.scss */
+/* line 1086, ../../resources/assets/sass/app.scss */
 #breadcrumb {
   list-style: none;
   display: inline-block;
 }
-/* line 1084, ../../resources/assets/sass/app.scss */
+/* line 1090, ../../resources/assets/sass/app.scss */
 #breadcrumb .icon {
   font-size: 14px;
 }
-/* line 1088, ../../resources/assets/sass/app.scss */
+/* line 1094, ../../resources/assets/sass/app.scss */
 #breadcrumb li {
   float: left;
 }
-/* line 1090, ../../resources/assets/sass/app.scss */
+/* line 1096, ../../resources/assets/sass/app.scss */
 #breadcrumb li a {
   color: #FFF !important;
   display: block;
@@ -1207,18 +1214,18 @@ table td, table th {
   margin-right: 23px;
   font-family: "Sun_antwerpen";
 }
-/* line 1104, ../../resources/assets/sass/app.scss */
+/* line 1110, ../../resources/assets/sass/app.scss */
 #breadcrumb li:first-child a {
   padding-left: 15px;
   -moz-border-radius: 4px 0 0 4px;
   -webkit-border-radius: 4px;
   border-radius: 4px 0 0 4px;
 }
-/* line 1107, ../../resources/assets/sass/app.scss */
+/* line 1113, ../../resources/assets/sass/app.scss */
 #breadcrumb li:first-child a:before {
   border: none;
 }
-/* line 1113, ../../resources/assets/sass/app.scss */
+/* line 1119, ../../resources/assets/sass/app.scss */
 #breadcrumb li:last-child a {
   padding-right: 15px;
   color: #007fa3 !important;
@@ -1227,30 +1234,30 @@ table td, table th {
   -webkit-border-radius: 0;
   border-radius: 0 4px 4px 0;
 }
-/* line 1118, ../../resources/assets/sass/app.scss */
+/* line 1124, ../../resources/assets/sass/app.scss */
 #breadcrumb li:last-child a:before {
   border-color: white;
   border-left-color: transparent;
 }
-/* line 1122, ../../resources/assets/sass/app.scss */
+/* line 1128, ../../resources/assets/sass/app.scss */
 #breadcrumb li:last-child a:after {
   border-left-color: white;
   border-color: white;
 }
-/* line 1126, ../../resources/assets/sass/app.scss */
+/* line 1132, ../../resources/assets/sass/app.scss */
 #breadcrumb li:last-child a:hover {
   background-color: white;
 }
-/* line 1129, ../../resources/assets/sass/app.scss */
+/* line 1135, ../../resources/assets/sass/app.scss */
 #breadcrumb li:last-child a:hover:before {
   border-color: white;
   border-left-color: transparent;
 }
-/* line 1133, ../../resources/assets/sass/app.scss */
+/* line 1139, ../../resources/assets/sass/app.scss */
 #breadcrumb li:last-child a:hover:after {
   border-left-color: white;
 }
-/* line 1141, ../../resources/assets/sass/app.scss */
+/* line 1147, ../../resources/assets/sass/app.scss */
 #breadcrumb li a:before, #breadcrumb li a:after {
   content: "";
   position: absolute;
@@ -1260,45 +1267,45 @@ table td, table th {
   width: 0;
   height: 0;
 }
-/* line 1151, ../../resources/assets/sass/app.scss */
+/* line 1157, ../../resources/assets/sass/app.scss */
 #breadcrumb li a:before {
   left: -20px;
   border-left-color: transparent;
 }
-/* line 1155, ../../resources/assets/sass/app.scss */
+/* line 1161, ../../resources/assets/sass/app.scss */
 #breadcrumb li a:after {
   left: 100%;
   border-color: transparent;
   border-left-color: #007fa3;
 }
-/* line 1160, ../../resources/assets/sass/app.scss */
+/* line 1166, ../../resources/assets/sass/app.scss */
 #breadcrumb li a:hover {
   background-color: #8d9092;
 }
-/* line 1163, ../../resources/assets/sass/app.scss */
+/* line 1169, ../../resources/assets/sass/app.scss */
 #breadcrumb li a:hover:before {
   border-color: #8d9092;
   border-left-color: transparent;
 }
-/* line 1167, ../../resources/assets/sass/app.scss */
+/* line 1173, ../../resources/assets/sass/app.scss */
 #breadcrumb li a:hover:after {
   border-left-color: #8d9092;
 }
-/* line 1171, ../../resources/assets/sass/app.scss */
+/* line 1177, ../../resources/assets/sass/app.scss */
 #breadcrumb li a:active {
   background-color: #007fa3;
 }
-/* line 1174, ../../resources/assets/sass/app.scss */
+/* line 1180, ../../resources/assets/sass/app.scss */
 #breadcrumb li a:active:before {
   border-color: #007fa3;
   border-left-color: transparent;
 }
-/* line 1178, ../../resources/assets/sass/app.scss */
+/* line 1184, ../../resources/assets/sass/app.scss */
 #breadcrumb li a:active:after {
   border-left-color: #007fa3;
 }
 
-/* line 1186, ../../resources/assets/sass/app.scss */
+/* line 1192, ../../resources/assets/sass/app.scss */
 .AP, .KdG, .HZS, .UA {
   background-size: contain;
   background-repeat: no-repeat;
@@ -1307,34 +1314,34 @@ table td, table th {
   height: 100%;
 }
 
-/* line 1194, ../../resources/assets/sass/app.scss */
+/* line 1200, ../../resources/assets/sass/app.scss */
 .AP {
   background-image: url("../images/school/ap.jpg");
 }
 
-/* line 1198, ../../resources/assets/sass/app.scss */
+/* line 1204, ../../resources/assets/sass/app.scss */
 .KdG {
   background-image: url("../images/school/kdg.png");
 }
 
-/* line 1202, ../../resources/assets/sass/app.scss */
+/* line 1208, ../../resources/assets/sass/app.scss */
 .HZS {
   background-image: url("../images/school/hzs.jpg");
 }
 
-/* line 1206, ../../resources/assets/sass/app.scss */
+/* line 1212, ../../resources/assets/sass/app.scss */
 .UA {
   background-image: url("../images/school/ua.png");
 }
 
-/* line 1214, ../../resources/assets/sass/app.scss */
+/* line 1220, ../../resources/assets/sass/app.scss */
 #sortSchools .container .row .shadow .school_photo {
   display: block;
   height: 250px;
   width: 50%;
   margin: 0 auto;
 }
-/* line 1221, ../../resources/assets/sass/app.scss */
+/* line 1227, ../../resources/assets/sass/app.scss */
 #sortSchools .container .row .shadow .text {
   text-align: center;
 }
