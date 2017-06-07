@@ -221,7 +221,9 @@ figure {
   overflow-x: hidden;
 
   video {
-    height: auto;
+    height: 100%;
+    zoom: 1;
+    min-height: 100%;
 
     @media screen and (min-width: $break-large) {
       height: auto;
