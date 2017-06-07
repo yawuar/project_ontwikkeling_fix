@@ -45,7 +45,7 @@
 <body>
   <!-- Fixed navbar -->
   <nav class="navbar navbar-default navbar-fixed-top">
-    <a href="./" class="logo"></a>
+    <a href="{{ url('/') }}" class="logo"></a>
     <div class="container">
       <div class="navbar-header page-scroll">
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
