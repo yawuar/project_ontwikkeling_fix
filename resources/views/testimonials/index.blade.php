@@ -36,7 +36,7 @@
       <div class="row">
         @foreach($articles as $article)
           <div class="col-xs-12 col-sm-6 col-lg-4">
-            <a href="{{ url('/testimonials/article/' . $article->id) }}" style="background-image: url('{{ $article->picture_url }}')" class="photo">
+            <a href="{{ url('/testimonials/article/' . $article->id) }}{{ (isset($article->user_id)) ? '?ourarticle=true' : '' }}" style="background-image: url('{{ $article->picture_url }}')" class="photo">
               <div class="bv-info">
                 <h2>{{str_limit($article->title, 30)}}</h2>
               </div>

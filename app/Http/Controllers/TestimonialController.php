@@ -62,9 +62,12 @@ class TestimonialController extends Controller
 
     public function show($id, Request $request)
     {
-      $testimonial = Gate15::find($id);
-      $test = $request->path();
-      return view('testimonials.detail', compact('testimonial', 'test'));
+      if (isset($_GET['ourarticle']) && $_GET['ourarticle'] == true) {
+        $testimonial = Article::find($id);
+      } else {
+        $testimonial = Gate15::find($id);
+      }
+      return view('testimonials.detail', compact('testimonial'));
     }
 
     public function showArticle() {
@@ -75,9 +78,25 @@ class TestimonialController extends Controller
     public function getDataByType($type) {
       $typeName = str_replace('-', ' ', $type);
       if($type === "geen-tag") {
-        $eventsByTag = Gate15::where('tags', "")->where('is_accepted', $this->is_accepted)->get();
+        $gate15articles = Gate15::where('tags', "")->where('is_accepted', $this->is_accepted)->get();
+        $ourArticles = Article::where('is_accepted', $this->is_accepted)->get();
+        $articles = [];
+        foreach($gate15articles as $object) {array_push($articles, $object);}
+        foreach($ourArticles as $object) {array_push($articles, $object);}
+        $articles = array_values(array_sort($articles, function ($value) {
+          return $value['published_on'];
+        }));
+        $eventsByTag = array_reverse($articles);
       } else if($type === 'all') {
-        $eventsByTag = Gate15::where('is_accepted', $this->is_accepted)->get();
+        $gate15articles = Gate15::where('is_accepted', $this->is_accepted)->get();
+        $ourArticles = Article::where('is_accepted', $this->is_accepted)->get();
+        $articles = [];
+        foreach($gate15articles as $object) {array_push($articles, $object);}
+        foreach($ourArticles as $object) {array_push($articles, $object);}
+        $articles = array_values(array_sort($articles, function ($value) {
+          return $value['published_on'];
+        }));
+        $eventsByTag = array_reverse($articles);
       } else {
         $eventsByTag = Gate15::where('tags', $typeName)->where('is_accepted', $this->is_accepted)->get();
       }
