@@ -73,7 +73,7 @@
   <div id="skyline">
   </div>
   <footer>
-    <p>&copy; 2017 Antwerpen.be | Privacy &amp; gebruiksvoorwaarden <a href="url('/cms')">admin</a></p>
+    <p>&copy; 2017 Antwerpen.be | Privacy &amp; gebruiksvoorwaarden <a href="{{ url('/cms') }}">admin</a></p>
   </footer>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
