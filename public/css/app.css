@@ -555,16 +555,16 @@ header #search .input-group-btn .btn .glyphicon {
   background-size: cover;
   background-position: center 30%;
   display: block;
-  width: 1000px;
   margin: 0 auto 50px auto;
+  height: 350px;
 }
 @media screen and (min-width: 768px) {
   /* line 510, ../../resources/assets/sass/app.scss */
   #mas {
-    height: 50%;
+    height: 400px;
   }
 }
-/* line 524, ../../resources/assets/sass/app.scss */
+/* line 523, ../../resources/assets/sass/app.scss */
 #mas .mas-box {
   position: absolute;
   left: 9%;
@@ -575,25 +575,25 @@ header #search .input-group-btn .btn .glyphicon {
   height: 100%;
   z-index: 0;
 }
-/* line 535, ../../resources/assets/sass/app.scss */
+/* line 534, ../../resources/assets/sass/app.scss */
 #mas .info {
   position: absolute;
   bottom: 10%;
   left: 20%;
 }
-/* line 539, ../../resources/assets/sass/app.scss */
+/* line 538, ../../resources/assets/sass/app.scss */
 #mas .info h1 {
   font-size: 20px;
   letter-spacing: 1px;
 }
 @media screen and (min-width: 768px) {
-  /* line 539, ../../resources/assets/sass/app.scss */
+  /* line 538, ../../resources/assets/sass/app.scss */
   #mas .info h1 {
     font-size: 40px;
     letter-spacing: 3px;
   }
 }
-/* line 548, ../../resources/assets/sass/app.scss */
+/* line 547, ../../resources/assets/sass/app.scss */
 #mas .info span {
   display: block;
   color: white;
@@ -602,42 +602,42 @@ header #search .input-group-btn .btn .glyphicon {
 }
 
 @media screen and (min-width: 768px) {
-  /* line 558, ../../resources/assets/sass/app.scss */
+  /* line 557, ../../resources/assets/sass/app.scss */
   .col-sm-4 {
     width: auto;
     padding: 0;
   }
 }
-/* line 564, ../../resources/assets/sass/app.scss */
+/* line 563, ../../resources/assets/sass/app.scss */
 #article, #schoolOpleiding_detail, #event_detail {
   margin: 150px 0 50px 0;
 }
-/* line 566, ../../resources/assets/sass/app.scss */
+/* line 565, ../../resources/assets/sass/app.scss */
 #article .container, #schoolOpleiding_detail .container, #event_detail .container {
   padding-left: 0;
   padding-right: 0;
 }
-/* line 571, ../../resources/assets/sass/app.scss */
+/* line 570, ../../resources/assets/sass/app.scss */
 #article .container nav ul li, #schoolOpleiding_detail .container nav ul li, #event_detail .container nav ul li {
   font-size: 400;
   list-style: none;
   display: inline-block;
 }
-/* line 575, ../../resources/assets/sass/app.scss */
+/* line 574, ../../resources/assets/sass/app.scss */
 #article .container nav ul li a, #schoolOpleiding_detail .container nav ul li a, #event_detail .container nav ul li a {
   color: black;
 }
-/* line 577, ../../resources/assets/sass/app.scss */
+/* line 576, ../../resources/assets/sass/app.scss */
 #article .container nav ul li a:hover, #schoolOpleiding_detail .container nav ul li a:hover, #event_detail .container nav ul li a:hover {
   text-decoration: none;
   color: #007fa3;
 }
-/* line 585, ../../resources/assets/sass/app.scss */
+/* line 584, ../../resources/assets/sass/app.scss */
 #article .container .row, #schoolOpleiding_detail .container .row, #event_detail .container .row {
   margin-right: 0;
   margin-left: 0;
 }
-/* line 588, ../../resources/assets/sass/app.scss */
+/* line 587, ../../resources/assets/sass/app.scss */
 #article .container .row .person, #schoolOpleiding_detail .container .row .person, #event_detail .container .row .person {
   position: relative;
   background-size: cover;
@@ -646,13 +646,13 @@ header #search .input-group-btn .btn .glyphicon {
   height: 200px;
 }
 @media screen and (min-width: 768px) {
-  /* line 588, ../../resources/assets/sass/app.scss */
+  /* line 587, ../../resources/assets/sass/app.scss */
   #article .container .row .person, #schoolOpleiding_detail .container .row .person, #event_detail .container .row .person {
     height: 450px;
     width: 80%;
   }
 }
-/* line 600, ../../resources/assets/sass/app.scss */
+/* line 599, ../../resources/assets/sass/app.scss */
 #article .container .row .person .bv-info, #schoolOpleiding_detail .container .row .person .bv-info, #event_detail .container .row .person .bv-info {
   position: absolute;
   right: -11%;
@@ -661,21 +661,21 @@ header #search .input-group-btn .btn .glyphicon {
   height: 40%;
 }
 @media screen and (min-width: 768px) {
-  /* line 600, ../../resources/assets/sass/app.scss */
+  /* line 599, ../../resources/assets/sass/app.scss */
   #article .container .row .person .bv-info, #schoolOpleiding_detail .container .row .person .bv-info, #event_detail .container .row .person .bv-info {
     width: 35%;
     right: -25%;
     width: 35%;
   }
 }
-/* line 613, ../../resources/assets/sass/app.scss */
+/* line 612, ../../resources/assets/sass/app.scss */
 #article .container .row .person .bv-info .date, #schoolOpleiding_detail .container .row .person .bv-info .date, #event_detail .container .row .person .bv-info .date {
   font-family: "Sun_antwerpen";
   color: #8d9092;
   display: block;
   text-align: right;
 }
-/* line 620, ../../resources/assets/sass/app.scss */
+/* line 619, ../../resources/assets/sass/app.scss */
 #article .container .row .person .bv-info h2, #schoolOpleiding_detail .container .row .person .bv-info h2, #event_detail .container .row .person .bv-info h2 {
   font-size: 18px;
   background-color: #007fa3;
@@ -688,58 +688,59 @@ header #search .input-group-btn .btn .glyphicon {
   text-align: center;
 }
 @media screen and (min-width: 768px) {
-  /* line 620, ../../resources/assets/sass/app.scss */
+  /* line 619, ../../resources/assets/sass/app.scss */
   #article .container .row .person .bv-info h2, #schoolOpleiding_detail .container .row .person .bv-info h2, #event_detail .container .row .person .bv-info h2 {
     font-size: 20px;
   }
 }
-/* line 637, ../../resources/assets/sass/app.scss */
+/* line 636, ../../resources/assets/sass/app.scss */
 #article .container .row .text, #schoolOpleiding_detail .container .row .text, #event_detail .container .row .text {
   margin-top: 100px;
 }
-/* line 640, ../../resources/assets/sass/app.scss */
+/* line 639, ../../resources/assets/sass/app.scss */
 #article .container .row .text h3, #schoolOpleiding_detail .container .row .text h3, #event_detail .container .row .text h3 {
   font-family: "Antwerpen";
   font-size: 44px;
   margin: 0;
 }
-/* line 646, ../../resources/assets/sass/app.scss */
+/* line 645, ../../resources/assets/sass/app.scss */
 #article .container .row .text .col-xs-10, #schoolOpleiding_detail .container .row .text .col-xs-10, #event_detail .container .row .text .col-xs-10 {
   padding-left: 0;
 }
-/* line 651, ../../resources/assets/sass/app.scss */
+/* line 650, ../../resources/assets/sass/app.scss */
 #article .container .row p, #schoolOpleiding_detail .container .row p, #event_detail .container .row p {
   color: black;
   font-size: 18px;
   line-height: 25.2px;
   width: 80%;
 }
-/* line 657, ../../resources/assets/sass/app.scss */
+/* line 656, ../../resources/assets/sass/app.scss */
 #article .container .row p:first-child, #schoolOpleiding_detail .container .row p:first-child, #event_detail .container .row p:first-child {
   font-size: 16px;
   line-height: 22.4px;
   color: #8d9092;
 }
-/* line 663, ../../resources/assets/sass/app.scss */
+/* line 662, ../../resources/assets/sass/app.scss */
 #article .container .row p strong, #article .container .row p a, #schoolOpleiding_detail .container .row p strong, #schoolOpleiding_detail .container .row p a, #event_detail .container .row p strong, #event_detail .container .row p a {
   color: #007fa3;
 }
-/* line 668, ../../resources/assets/sass/app.scss */
+/* line 667, ../../resources/assets/sass/app.scss */
 #article .container .row ul, #schoolOpleiding_detail .container .row ul, #event_detail .container .row ul {
   font-family: "Sun_antwerpen";
   font-size: 16px;
   margin-left: 50px;
 }
-/* line 672, ../../resources/assets/sass/app.scss */
+/* line 671, ../../resources/assets/sass/app.scss */
 #article .container .row ul li, #schoolOpleiding_detail .container .row ul li, #event_detail .container .row ul li {
   margin-bottom: 5px;
 }
 
-/* line 680, ../../resources/assets/sass/app.scss */
+/* line 679, ../../resources/assets/sass/app.scss */
 #skyline {
   background-image: url("../images/skyline.png");
   background-repeat: no-repeat;
   background-size: cover;
+  background-position-y: 2px;
   height: 134px;
   width: 100%;
   margin-top: 50px;

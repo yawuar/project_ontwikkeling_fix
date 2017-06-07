@@ -513,12 +513,11 @@ header {
   @include background-size(cover);
   background-position: center 30%;
   display: block;
-  width: 1000px;
   margin: 0 auto 50px auto;
-  // height: 350px;
+  height: 350px;
 
   @media screen and (min-width: $break-medium) {
-    height: 50%;
+    height: 400px;
   }
 
   .mas-box {
@@ -681,6 +680,7 @@ header {
   background-image: url('../images/skyline.png');
   background-repeat: no-repeat;
   background-size: cover;
+  background-position-y: 2px;
   height: 134px;
   width: 100%;
   margin-top: 50px;

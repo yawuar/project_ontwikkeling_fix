@@ -50,11 +50,13 @@
   </section>
 
   <!-- Artikelen -->
-  <a href="{{ url('/events/' . strtolower(str_replace(' ', '_', $event['title']))) }}" id="mas" style="background-image: url('{{ $event['picture_url'] }}')">
-    <div class="mas-box"></div>
-    <div class="info">
-      <h1>{{ $event['title'] }}</h1>
-      <span>{{ gmdate("d-m-Y", $event['event_begin_date']) }}</span>
-    </div>
-  </a>
+  <div class="container">
+    <a href="{{ url('/events/' . strtolower(str_replace(' ', '_', $event['title']))) }}" id="mas" style="background-image: url('{{ $event['picture_url'] }}')">
+      <div class="mas-box"></div>
+      <div class="info">
+        <h1>{{ $event['title'] }}</h1>
+        <span>{{ gmdate("d-m-Y", $event['event_begin_date']) }}</span>
+      </div>
+    </a>
+  </div>
 @endsection
