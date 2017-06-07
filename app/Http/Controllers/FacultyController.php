@@ -58,7 +58,7 @@ class FacultyController extends Controller
     $faculty->name = $request->name;
     $faculty->save();
 
-    return redirect('/cms/studeren/faculties');
+    return redirect(url('/cms/studeren/faculties'));
   }
 
   /**
@@ -106,6 +106,6 @@ class FacultyController extends Controller
   {
     $faculty = Faculty::find($id);
     $faculty->delete();
-    return redirect('/cms/studeren/faculties');
+    return redirect(url('/cms/studeren/faculties'));
   }
 }

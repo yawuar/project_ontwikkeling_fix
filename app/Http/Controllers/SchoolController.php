@@ -38,7 +38,7 @@ class SchoolController extends Controller
       $schools = Study::join('school', 'opleidingen.school_id', '=', 'school.school_id')->join('faculties', 'opleidingen.faculty_id', '=', 'faculties.faculty_id')->select('opleidingen.name', 'opleidingen.url', 'opleidingen.content', 'faculties.name AS faculty_name')->get()->random(1)->first();
       $facultyName = str_slug($schools['faculty_name'], '-');
       $studyName = str_slug($schools['name'], '-');
-      return redirect('studeren/'. $facultyName .'/' . $studyName);
+      return redirect(url('studeren/'. $facultyName .'/' . $studyName));
     }
 
     public function keepInSession($name) {

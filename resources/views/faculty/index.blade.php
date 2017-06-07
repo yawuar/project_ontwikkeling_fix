@@ -7,7 +7,7 @@
             <h3>Lijst van alle faculteiten</h3>
             <button type="button" class="btn btn-default" onclick="window.location='{{ url('cms/studeren/faculties/editor/new') }}'">Nieuwe Faculteit toevoegen</button><br/><br/>
             @foreach ($faculties as $faculty)
-                <a href="/cms/studeren/faculties/editor/{{ $faculty->faculty_id }}">
+                <a href="{{ url('/cms/studeren/faculties/editor/' . $faculty->faculty_id) }}">
                     <div class="panel panel-default">
                         <div class="panel-heading">{{ $faculty->name }}</div>
                     </div>

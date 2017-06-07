@@ -12,19 +12,19 @@
 
   <div id="random">
     <p>Geef een willekeurige testimonial</p>
-    <a href="/testimonials/randomTestimonial"></a>
+    <a href="{{ url('/testimonials/randomTestimonial') }}"></a>
   </div>
 
   <div class="filter testimonials">
     <div class="container">
       <h1>Categorie</h1>
       <ul>
-        <li><a href="/testimonials/filter/all">Alle artikelen</a></li>
+        <li><a href="{{ url('/testimonials/filter/all') }}">Alle artikelen</a></li>
         @foreach($uniqueTags as $tag)
           @if($tag['tags'] === "")
-            <li><a href="/testimonials/filter/geen-tag">Andere artikelen</a></li>
+            <li><a href="{{ url('/testimonials/filter/geen-tag') }}">Andere artikelen</a></li>
           @else
-            <li><a href="/testimonials/filter/{{ str_replace(' ', '-', $tag['tags']) }}">{{ $tag['tags'] }}</a></li>
+            <li><a href="{{ url('/testimonials/filter/' . str_replace(' ', '-', $tag['tags'])) }}">{{ $tag['tags'] }}</a></li>
           @endif
         @endforeach
       </ul>
@@ -36,7 +36,7 @@
       <div class="row">
         @foreach($articles as $article)
           <div class="col-xs-12 col-sm-6 col-lg-4">
-            <a href="/testimonials/article/{{ $article->id }}" style="background-image: url('{{ $article->picture_url }}')" class="photo">
+            <a href="{{ url('/testimonials/article/' . $article->id) }}" style="background-image: url('{{ $article->picture_url }}')" class="photo">
               <div class="bv-info">
                 <h2>{{str_limit($article->title, 30)}}</h2>
               </div>

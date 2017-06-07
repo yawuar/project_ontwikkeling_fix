@@ -46,8 +46,4 @@
       @endforeach
     </div>
   </section>
-
-  <div class="dummy">
-
-  </div>
 @endsection

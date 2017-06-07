@@ -51,7 +51,7 @@ class HighSchoolController extends Controller
       $school->abbreviation = $request->abbreviation;
       $school->save();
 
-      return redirect('/cms/studeren/scholen');
+      return redirect(url('/cms/studeren/scholen'));
     }
 
     /**
@@ -99,6 +99,6 @@ class HighSchoolController extends Controller
     {
       $school = School::find($id);
       $school->delete();
-      return redirect('/cms/studeren/scholen');
+      return redirect(url('/cms/studeren/scholen'));
     }
 }

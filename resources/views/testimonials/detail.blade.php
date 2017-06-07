@@ -7,7 +7,7 @@
       <!-- Bread Crumbs -->
       <nav>
         <ul id="breadcrumb">
-          <li><a href="/testimonials#testimonials"><span>Overzicht</span></a></li>
+          <li><a href="{{ url('/testimonials#testimonials') }}"><span>Overzicht</span></a></li>
           <li><a><span>{{ str_limit($testimonial['title'], 50) }}</span></a></li>
         </ul>
       </nav>

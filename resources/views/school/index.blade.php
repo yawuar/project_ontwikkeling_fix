@@ -12,7 +12,7 @@
 
 <div id="random">
   <p>Geef een willekeurige opleiding</p>
-  <a href="/studeren/randomStudy"></a>
+  <a href="{{ url('/studeren/randomStudy') }}"></a>
 </div>
 
   <!-- Wat doen we? -->
@@ -48,10 +48,10 @@
                   @else
                     <a class="heart btn_{{ $key }}"></a>
                   @endif
-                  <div onclick="location.href='/studeren/{{ str_slug($faculty['name'], '-') }}'" class="f_photo" style="background-image: url('{{ $faculty['image_url'] }}')"></div>
+                  <div onclick="location.href='{{ url('/studeren/' . str_slug($faculty['name'], '-')) }}'" class="f_photo" style="background-image: url('{{ asset($faculty['image_url']) }}')"></div>
                 </div>
                 <div class="text">
-                  <p><a href="/studeren/{{ str_slug($faculty['name'], '-') }}">{{ $faculty['name'] }}</a></p>
+                  <p><a href="{{ url('/studeren/' . str_slug($faculty['name'], '-')) }}">{{ $faculty['name'] }}</a></p>
                 </div>
               </div>
           </div>
