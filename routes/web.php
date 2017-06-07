@@ -105,5 +105,5 @@ Route::delete('/cms/studeren/faculties/study-delete/{id}', 'FacultyController@de
 //API voor game
 Route::get('/api/login', 'restapiController@login');
 Route::get('/api/register', 'restapiController@register');
-Route::get('/api/send-score', 'restapiController@sendScore');
+Route::get('/api/set-score', 'restapiController@sendScore');
 Route::get('/api/get-score', 'restapiController@getScore');
