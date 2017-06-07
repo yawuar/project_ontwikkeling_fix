@@ -74,12 +74,15 @@ class restapiController extends Controller
             $scoreFlappy = Score::select('scoreFlappy')->where('user_id', '=', $userid)->get();
             $scoreMaze = Score::select('scoreMaze')->where('user_id', '=', $userid)->get();
 
-            return response()->json([
+            $response = ($scoreStacker[0]->scoreStacker . " " . $scoreFrogger[0]->scoreFrogger . " " . $scoreFlappy[0]->scoreFlappy . " " . $scoreMaze[0]->scoreMaze);
+            return $response;
+
+            /*return response()->json([
                 'scoreStacker' => $scoreStacker[0]->scoreStacker,
                 'scoreFrogger' => $scoreFrogger[0]->scoreFrogger,
                 'scoreFlappy' => $scoreFlappy[0]->scoreFlappy,
                 'scoreMaze' => $scoreMaze[0]->scoreMaze
-            ]);
+            ]);*/
         } else {
             return 'false';
         }
