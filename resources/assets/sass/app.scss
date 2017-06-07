@@ -2,6 +2,7 @@
 $red: #cb0333;
 $blue: #007fa3;
 $grey: #8d9092;
+$green: #009882;
 $antwerp: 'Antwerpen';
 $sun_antwerp: 'Sun_antwerpen';
 $break-medium: 768px;
@@ -686,14 +687,22 @@ header {
 
 footer {
   width: 100%;
-  background-color: black;
+  background-color: $blue;
 
   p {
     font-size: 16px;
     text-align: center;
     margin: 0;
-    color: $grey;
+    color: white;
     padding: 20px;
+    a {
+      text-decoration: underline;
+      color: white;
+
+      &:hover {
+        color: white;
+      }
+    }
   }
 }
 
@@ -705,6 +714,80 @@ footer {
 
   @media screen and (min-width: $break-medium) {
     min-height: 50%;
+  }
+}
+
+#game {
+  margin-bottom: 100px;
+  .container {
+    position: relative;
+    padding: 0;
+    .scoreBoard {
+      position: absolute;
+      width: 275px;
+      right: 15%;
+      top: 50%;
+      @include transform(translateY(-50%));
+
+      .head {
+        background-color: $green;
+        color: white;
+        text-align: center;
+        padding: 20px 0;
+        font-family: $antwerp;
+        font-size: 14px;
+        letter-spacing: 2px;
+      }
+
+      .item {
+        position: relative;
+        background-color: white;
+        height: 50px;
+        border-bottom: 1px solid $grey;
+        &:last-child {
+          border-bottom: none;
+        }
+        h1 {
+          position: absolute;
+          top: 50%;
+          left: 15px;
+          @include transform(translateY(-50%));
+          color: $green;
+          font-size: 16px;
+        }
+
+        .personal {
+          position: absolute;
+          top: 50%;
+          left: 40px;
+          display: grid;
+          @include transform(translateY(-50%));
+          font-family: $antwerp;
+
+          .best {
+            color: $grey;
+            font-size: 10px;
+          }
+        }
+
+        .highscore {
+          position: absolute;
+          top: 50%;
+          right: 20px;
+          @include transform(translateY(-50%));
+          font-family: $antwerp;
+          color: $grey;
+          font-size: 12px;
+        }
+      }
+    }
+    .image {
+      background-image: url('../images/iphone.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position-y: 50%;
+      height: 400px;
+    }
   }
 }
 

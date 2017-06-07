@@ -24,6 +24,55 @@
     </div>
   </section>
 
+  <section id="game">
+    <div class="container">
+      <div class="scoreBoard">
+        <div class="head">Scoreboard</div>
+        <div class="item">
+          <h1 class="number">1.</h1>
+          <div class="personal">
+            <span class="name">Yawuar</span>
+            <span class="best">Best: Flappy - 14</span>
+          </div>
+          <span class="highscore">Topscore: 50</span>
+        </div>
+        <div class="item">
+          <h1 class="number">1.</h1>
+          <div class="personal">
+            <span class="name">Yawuar</span>
+            <span class="best">Best: Flappy - 14</span>
+          </div>
+          <span class="highscore">Topscore: 50</span>
+        </div>
+        <div class="item">
+          <h1 class="number">1.</h1>
+          <div class="personal">
+            <span class="name">Yawuar</span>
+            <span class="best">Best: Flappy - 14</span>
+          </div>
+          <span class="highscore">Topscore: 50</span>
+        </div>
+        <div class="item">
+          <h1 class="number">1.</h1>
+          <div class="personal">
+            <span class="name">Yawuar</span>
+            <span class="best">Best: Flappy - 14</span>
+          </div>
+          <span class="highscore">Topscore: 50</span>
+        </div>
+        <div class="item">
+          <h1 class="number">1.</h1>
+          <div class="personal">
+            <span class="name">Yawuar</span>
+            <span class="best">Best: Flappy - 14</span>
+          </div>
+          <span class="highscore">Topscore: 50</span>
+        </div>
+      </div>
+      <div class="image"></div>
+    </div>
+  </section>
+
   <!-- Artikelen -->
   <section id="events">
     <div class="container">
