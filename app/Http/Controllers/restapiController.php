@@ -42,6 +42,7 @@ class restapiController extends Controller
             $userid = $userid[0]->id;
 
             $userscore = new Score;
+            $userscore->user_id = $userid;
             $userscore->scoreStacker = 0;
             $userscore->scoreFrogger = 0;
             $userscore->scoreFlappy = 0;
