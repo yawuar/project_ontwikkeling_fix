@@ -7,10 +7,12 @@
       var getNavbar = document.getElementsByClassName('navbar-default')[0];
       if(!getNavbar.classList.contains('active')) {
         getNavbar.classList.toggle('active');
+        getNavbar.style.boxShadow = "1px 1px 1px #8d9092";
       }
     } else {
       var getNavbar = document.getElementsByClassName('navbar-default')[0];
       getNavbar.classList.remove('active');
+      getNavbar.style.boxShadow = "0px 0px 0px #8d9092";
     }
   }
 

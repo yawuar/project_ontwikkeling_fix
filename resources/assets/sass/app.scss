@@ -95,6 +95,10 @@ figure {
   top: 15px;
 }
 
+.navbar {
+  margin-bottom: 0;
+}
+
 .active {
   top: 0;
   background-color: #ffffff !important;
@@ -115,6 +119,7 @@ figure {
     }
   }
   .navbar-header {
+    @include box-shadow(1px 1px 1px $grey);
     button {
       height: 75px;
       margin-top: 0;
@@ -144,6 +149,7 @@ figure {
     background: none;
     border: none;
     height: 75px;
+    // @include box-shadow(1px 1px 1px $grey);
 
     .logo {
       display: block;
