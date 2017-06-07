@@ -105,14 +105,14 @@
 
   function activateCourseHeart(e) {
     // e.preventDefault();
-    console.log(window.location.href);
+    var path = window.location.href.replace(window.location.pathname, '');
     var url, removeClass, addClass, isActivateHeart;
     if($(e.target).hasClass('heart')) {
-      url = window.location.href + '/heart/session/course/' + e.target.classList[1];
+      url = path + '/studeren/heart/session/course/' + e.target.classList[1];
       removeClass = 'heart';
       addClass = 'fullHeart';
     } else {
-      url = window.location.href + '/heart/session/course/' + e.target.classList[1] + '/remove';
+      url = path + '/studeren/heart/session/course/' + e.target.classList[1] + '/remove';
       removeClass = 'fullHeart';
       addClass = 'heart';
     }
