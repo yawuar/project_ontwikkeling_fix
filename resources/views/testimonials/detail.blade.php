@@ -23,9 +23,11 @@
           <div class="text">
             <div class="col-xs-10">
               {!! $testimonial['content'] !!}
+              @if (!isset($testimonial->user_id))
               <div onclick="window.open('{{ $testimonial['article_url'] }}', '_blank')" id="url">
                 <p>Naar origineel artikel</p>
               </div>
+              @endif
             </div>
           </div>
         </div>
