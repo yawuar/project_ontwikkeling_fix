@@ -21,7 +21,9 @@
         <div class="text">
           <div class="col-xs-10">
             <p>{!! $event['content'] !!}</p>
-            <p><a target="_blank" href="{{ $event['event_url'] }}">Link naar origineel artikel</a></p>
+            <div onclick="window.open('{{ $event['event_url'] }}', '_blank')" id="url" style="margin-top: 50px;">
+              <p>Naar origineel artikel</p>
+            </div>
           </div>
         </div>
       </div>

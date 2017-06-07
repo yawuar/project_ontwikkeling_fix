@@ -23,7 +23,9 @@
           <div class="text">
             <div class="col-xs-10">
               {!! $testimonial['content'] !!}
-              <p><a target="_blank" href="{{ $testimonial['article_url'] }}">Link naar origineel artikel</a></p>
+              <div onclick="window.open('{{ $testimonial['article_url'] }}', '_blank')" id="url">
+                <p>Naar origineel artikel</p>
+              </div>
             </div>
           </div>
         </div>

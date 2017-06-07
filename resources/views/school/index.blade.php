@@ -20,7 +20,7 @@
     <div class="container">
       <div class="row">
         <div class="col-xs-12 col-sm-4">
-          <h2 class="section-heading">Onze aanbod aan scholen</h2>
+          <h2 class="section-heading">Ons aanbod aan scholen</h2>
         </div>
         <div class="col-xs-12 col-sm-8">
           <p class="text-faded">Lorem ipsum dolor sit amet, consectetur <span>adipiscing</span> elit. Cras id aliquam est. Praesent <span>accumsan</span> aliquet ligula, vel porta ipsum viverra accumsan. Nulla at nunc vitae mi pulvinar tempus. Aliquam iaculis, metus sed commodo
