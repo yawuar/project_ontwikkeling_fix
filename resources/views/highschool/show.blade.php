@@ -10,7 +10,7 @@
                     {{ csrf_field() }}
                     <input name="_method" type="hidden" value="DELETE">
                     <!--Future: ask for confirmation-->
-                    <button type="submit" class="btn btn-danger pull-right">Hogeschool verwijderen</button>
+                    <button type="submit" class="btn btn-danger pull-right">School verwijderen</button>
                 </form>
             @endif
         </div>
@@ -22,11 +22,11 @@
                 <input type="hidden" name="school_id" value="{{ $school['school_id'] or 'new' }}">
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        <input class="form-control" placeholder="Hogeschool naam" type="text" name="name" value="{{ $school->name or '' }}" required>
+                        <input class="form-control" placeholder="School naam" type="text" name="name" value="{{ $school->name or '' }}" required>
                     </div>
 
                     <div class="panel-heading">
-                        <input class="form-control" placeholder="Hogeschool afkorting" type="text" name="abbreviation" value="{{ $school->abbreviation or '' }}" required>
+                        <input class="form-control" placeholder="School afkorting" type="text" name="abbreviation" value="{{ $school->abbreviation or '' }}" required>
                     </div>
 
                 </div>

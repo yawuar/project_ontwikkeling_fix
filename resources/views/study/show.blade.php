@@ -22,15 +22,15 @@
                 <input type="hidden" name="opleiding_id" value="{{ $study['opleiding_id'] or 'new' }}">
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        <input class="form-control" placeholder="Study name" type="text" name="name" value="{{ $study->name or '' }}" required>
+                        <input class="form-control" placeholder="Opleiding name" type="text" name="name" value="{{ $study->name or '' }}" required>
                     </div>
 
                     <div class="panel-body">
-                        <textarea id="textarea" class="form-control" placeholder="Study tekst" name="content" rows="10" required>{{ $study->content or '' }}</textarea>
+                        <textarea id="textarea" class="form-control" placeholder="Opleiding tekst" name="content" rows="10" required>{{ $study->content or '' }}</textarea>
                     </div>
 
                     <div class="panel-heading">
-                        <input class="form-control" placeholder="Study url" type="text" name="url" value="{{ $study->url or '' }}" required>
+                        <input class="form-control" placeholder="Opleiding url" type="text" name="url" value="{{ $study->url or '' }}" required>
                     </div>
 
                     @if(!empty($study->image_url))

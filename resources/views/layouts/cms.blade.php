@@ -57,7 +57,7 @@
                             <ul class="dropdown-menu">
                                 <li><a href="{{ url('cms/studeren/scholen') }}" id="articles">Scholen</a></li>
                                 <li><a href="{{ url('cms/studeren/faculties') }}" id="articles">Faculteiten</a></li>
-                                <li><a href="{{ url('cms/studeren/opleidingen') }}" id="articles">opleidingen</a></li>
+                                <li><a href="{{ url('cms/studeren/opleidingen') }}" id="articles">Opleidingen</a></li>
                             </ul>
                         </li>
                         @endif
