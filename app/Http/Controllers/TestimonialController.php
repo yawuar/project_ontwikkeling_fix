@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Gate15;
 use Response;
+use App\Article;
 
 class TestimonialController extends Controller
 {
@@ -18,7 +19,23 @@ class TestimonialController extends Controller
     public function index()
     {
       $uniqueTags = Gate15::select('tags')->where('is_accepted', $this->is_accepted)->distinct()->get();
-      $articles = Gate15::select('*')->where('is_accepted', $this->is_accepted)->limit(5)->get();
+      $gate15articles = Gate15::select('*')->where('is_accepted', $this->is_accepted)->get();
+      $ourArticles = Article::select('*')->where('is_accepted', $this->is_accepted)->get();
+
+      $articles = [];
+      foreach($gate15articles as $object) {
+        array_push($articles, $object);
+      }
+      foreach($ourArticles as $object) {
+        array_push($articles, $object);
+      }
+
+      $articles = array_values(array_sort($articles, function ($value) {
+        return $value['published_on'];
+      }));
+      
+      $articles = array_reverse($articles);
+
       return view('testimonials.index', compact('articles', 'uniqueTags'));
     }
 

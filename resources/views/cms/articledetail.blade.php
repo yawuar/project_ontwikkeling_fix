@@ -8,6 +8,7 @@
 
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
+            <button type="button" class="btn btn-default" onclick="window.location='{{ url('cms/articles') }}'">< Terug</button>
             @if(!empty($article))
                 <form action="{{ url('/cms/article-delete') }}" method="POST", class="form-horizontal">
                     {{ csrf_field() }}

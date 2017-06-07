@@ -71,6 +71,7 @@ class cmsController extends Controller
 
         if ($request->postId == 'new') {
             $article = new Article;
+            $article->published_on = date(DATE_ATOM);
         } else {
             $article = Article::find($request->postId);
         }
@@ -93,8 +94,11 @@ class cmsController extends Controller
         $article->title = $request->title;
         $article->content = $request->content;
         $article->is_testimonial = 0;
-        $article->is_accepted = 0;
-        $article->published_on = "0000-01-01";
+        if ($article->is_accepted == 0) {
+            $article->is_accepted = 0;
+        } else {
+            $article->is_accepted = 1;
+        }
         $article->save();
 
         return redirect('/cms/articles');
@@ -137,6 +141,7 @@ class cmsController extends Controller
             $article->is_accepted = false;
         } else {
             $article->is_accepted = true;
+            $article->published_on = date(DATE_ATOM);
         }
         $article->save();
 

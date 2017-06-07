@@ -4,14 +4,14 @@
   <header class="testimonial video">
     <div class="header-content">
       <div class="header-content-inner">
-        <h1 id="homeHeading">Testimonials</h1>
+        <h1 id="homeHeading">Artikelen</h1>
       </div>
     </div>
     <div class="box"></div>
   </header>
 
   <div id="random">
-    <p>Geef een willekeurige testimonial</p>
+    <p>Geef een willekeurig artikel</p>
     <a href="/testimonials/randomTestimonial"></a>
   </div>
 
