@@ -531,7 +531,7 @@ header {
     left: 9%;
     top: 0;
     background-color: $blue;
-    mix-blend-mode: overlay;
+    mix-blend-mode: hard-light;
     width: 20%;
     height: 100%;
     z-index: 0;

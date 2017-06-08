@@ -581,7 +581,7 @@ header #search .input-group-btn .btn .glyphicon {
   left: 9%;
   top: 0;
   background-color: #007fa3;
-  mix-blend-mode: overlay;
+  mix-blend-mode: color-burn;
   width: 20%;
   height: 100%;
   z-index: 0;
