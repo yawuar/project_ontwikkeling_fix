@@ -21,7 +21,7 @@
           <div class="dummy"></div>
           <div class="text">
             <div class="col-xs-10">
-              {!! $schools[0]['content'] !!}
+              <p>{!! $schools[0]['content'] !!}</p>
             </div>
           </div>
         </div>
