@@ -74,7 +74,7 @@
         }
 
         for(var i = 0; i < data.length; i++) {
-          var newhtml = '<div class="col-xs-12 col-sm-6 col-lg-4"><a href="' + window.location.href + '/article/' + data[i]['id'] + '" style="background-image: url(\'' + data[i]['picture_url'] + '\')" class="photo"><div class="bv-info"><h2>' + data[i]['title'] + '</h2></div></a></div>';
+          var newhtml = '<div class="col-xs-12 col-sm-6 col-lg-4"><a href="' + window.location.href + '/article/' + data[i]['id'] + ((data[i]['user_id']) ? '?ourarticle=true' : '') + '" style="background-image: url(\'' + data[i]['picture_url'] + '\')" class="photo"><div class="bv-info"><h2>' + data[i]['title'] + '</h2></div></a></div>';
           newhtmls = newhtmls + newhtml;
           htmlParent.html(newhtmls);
         }
