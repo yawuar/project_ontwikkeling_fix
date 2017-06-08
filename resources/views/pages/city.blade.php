@@ -31,42 +31,37 @@
         <div class="item">
           <h1 class="number">1.</h1>
           <div class="personal">
-            <span class="name">Yawuar</span>
-            <span class="best">Best: Flappy - 14</span>
+            <span class="name" id="1name">Yawuar</span>
           </div>
-          <span class="highscore">Topscore: 50</span>
+          <span class="highscore" id="1highscore">Topscore: 50</span>
         </div>
         <div class="item">
-          <h1 class="number">1.</h1>
+          <h1 class="number">2.</h1>
           <div class="personal">
-            <span class="name">Yawuar</span>
-            <span class="best">Best: Flappy - 14</span>
+            <span class="name" id="2name">Yawuar</span>
           </div>
-          <span class="highscore">Topscore: 50</span>
+          <span class="highscore" id="2highscore">Topscore: 50</span>
         </div>
         <div class="item">
-          <h1 class="number">1.</h1>
+          <h1 class="number">3.</h1>
           <div class="personal">
-            <span class="name">Yawuar</span>
-            <span class="best">Best: Flappy - 14</span>
+            <span class="name" id="3name">Yawuar</span>
           </div>
-          <span class="highscore">Topscore: 50</span>
+          <span class="highscore" id="3highscore">Topscore: 50</span>
         </div>
         <div class="item">
-          <h1 class="number">1.</h1>
+          <h1 class="number">4.</h1>
           <div class="personal">
-            <span class="name">Yawuar</span>
-            <span class="best">Best: Flappy - 14</span>
+            <span class="name" id="4name">Yawuar</span>
           </div>
-          <span class="highscore">Topscore: 50</span>
+          <span class="highscore" id="4highscore">Topscore: 50</span>
         </div>
         <div class="item">
-          <h1 class="number">1.</h1>
+          <h1 class="number">5.</h1>
           <div class="personal">
-            <span class="name">Yawuar</span>
-            <span class="best">Best: Flappy - 14</span>
+            <span class="name" id="5name">Yawuar</span>
           </div>
-          <span class="highscore">Topscore: 50</span>
+          <span class="highscore" id="5highscore">Topscore: 50</span>
         </div>
       </div>
       <div class="image"></div>
@@ -95,4 +90,6 @@
       @endforeach
     </div>
   </section>
+  <script type="text/javascript">
+  </script>
 @endsection

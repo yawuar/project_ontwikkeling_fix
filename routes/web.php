@@ -17,6 +17,7 @@ use App\Article;
 Route::get('/', ['uses' => 'HomeController@index']);
 
 Route::get('/city', ['uses' => 'PageController@city']);
+Route::get('/city/score', ['uses' => 'PageController@getScore']);
 
 Route::get('/events', ['uses' => 'EventsController@index']);
 Route::get('/events/{name}', ['uses' => 'EventsController@show']);

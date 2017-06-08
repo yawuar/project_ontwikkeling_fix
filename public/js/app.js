@@ -84,6 +84,7 @@
 
   function activateHeart(e) {
     var url, removeClass, addClass, isActivateHeart;
+    console.log(window.location.href + '/heart/session/' + e.target.classList[1]);
     if($(e.target).hasClass('heart')) {
       url = window.location.href + '/heart/session/' + e.target.classList[1];
       removeClass = 'heart';
@@ -176,6 +177,32 @@
     for(var h = 0; h < heartCourse.length; h++) {
       heartCourse[h].addEventListener('click', activateCourseHeart);
     }
+    var game = $('#game');
+    if(game.length) {
+      window.setInterval(function() {
+        updateScoreBoard();
+      }, 100);
+    }
+  }
+
+  function updateScoreBoard() {
+    var html = '';
+    var scoreBoard = $('#game .scoreBoard');
+    $.ajax({
+      url: window.location.href + '/score',
+      success: function(data) {
+        for(var i = 0; i < data.length; i++) {
+          $('#' + (i + 1) + 'name').html(data[i]['username']);
+          $('#' + (i + 1) + 'highscore').html('Topscore: ' + data[i]['totalscore']);
+        }
+        // for(var i = 0; i < data.length; i++) {
+        //   //$('.item').remove();
+        //   //html = '<div class="item"><h1 class="number">' + (i + 1) + '.</h1><div class="personal"><span class="name">' + data[i]['username'] + '</span></div><span class="highscore">Topscore: ' + data[i]['totalscore'] + '</span></div>';
+        //   console.log(html);
+        //   //scoreBoard.append(html);
+        // }
+      }
+    })
   }
 
   bindEvents();
