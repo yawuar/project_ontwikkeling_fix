@@ -56,8 +56,8 @@
                 <div class="navbar-header">
 
                     <!-- Branding Image -->
-                    <a class="navbar-brand" href="{{ url('/cms') }}">
-                        Dashboard
+                    <a class="navbar-brand" href="{{ url('/') }}">
+                        Website
                     </a>
                 </div>
 
