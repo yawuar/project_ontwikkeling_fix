@@ -544,6 +544,7 @@ header {
     h1 {
       font-size: 20px;
       letter-spacing: 1px;
+      @include text-shadow(2px 1px 2px $grey);
 
       @media screen and (min-width: $break-medium) {
         font-size: 40px;
@@ -551,6 +552,7 @@ header {
       }
     }
     span {
+      @include text-shadow(2px 1px 2px $grey);
       display: block;
       color: white;
       font-size: 16px;
