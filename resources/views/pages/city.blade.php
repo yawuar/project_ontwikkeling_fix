@@ -26,7 +26,7 @@
 
   <section id="game">
     <div class="container">
-      <a href="{{ asset('test10.apk') }}" class="play"></a>
+      <a href="{{ asset('ontdekAntwerpen.apk') }}" class="play"></a>
       <div class="scoreBoard">
         <div class="head">Scoreboard</div>
         <div class="item">
