@@ -6,7 +6,7 @@
     <div class="container">
       <nav>
         <ul id="breadcrumb">
-          <li><a href="{{ url('/studeren#school') }}"><span/>school<span></a></li>
+          <li><a href="{{ url('/studeren') }}"><span/>school<span></a></li>
           <li><a href="{{ url('/studeren/' . str_slug($schools[0]['faculty_name'], '-')) }}"><span>{{ $schools[0]['faculty_name'] }}</span></a></li>
           <li><a><span>{{ $schools[0]['name'] }}</span></a></li>
         </ul>
