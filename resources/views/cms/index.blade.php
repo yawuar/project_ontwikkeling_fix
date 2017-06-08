@@ -13,7 +13,7 @@
                     <p>
                         Kies bovenaan de pagina een pagina of item dat u wilt aanpassen.
                     </p>
-                    <a href="{{ route('login') }}">of Log in</a>
+                    <p>(Niet beschikbaar op mobile. Log in via desktop om het dashboard te gebruiken.)</p>
                 </div>
             </div>
 
