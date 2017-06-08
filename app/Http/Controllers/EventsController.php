@@ -9,7 +9,7 @@ use Response;
 class EventsController extends Controller
 {
   public function index() {
-    $events = Gate15Event::orderBy('event_begin_date', 'DESC')->get();
+    $events = Gate15Event::where('event_begin_date', '>', time())->orderBy('event_begin_date', 'ASC')->get();
     $uniqueTags = Gate15Event::select('event_type')->distinct()->get();
     return view('events.index', compact('events', 'uniqueTags'));
   }
