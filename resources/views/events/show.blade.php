@@ -22,7 +22,7 @@
           <div class="col-xs-10">
             <p>{!! $event['content'] !!}</p>
             <div onclick="window.open('{{ $event['event_url'] }}', '_blank')" id="url" style="margin-top: 50px;">
-              <p>Naar origineel artikel</p>
+              <p>Naar origineel event</p>
             </div>
           </div>
         </div>
