@@ -13,9 +13,10 @@
                     <p>
                         Kies bovenaan de pagina een pagina of item dat u wilt aanpassen.
                     </p>
+                    <a href="{{ route('login') }}">of Log in</a>
                 </div>
             </div>
-            
+
         </div>
     </div>
 </div>
