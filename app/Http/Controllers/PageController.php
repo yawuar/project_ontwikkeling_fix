@@ -8,6 +8,7 @@ use App\Gate15;
 use App\Atypical_Location;
 use App\Score;
 use App\User;
+use Response;
 
 class PageController extends Controller
 {
@@ -20,6 +21,10 @@ class PageController extends Controller
       $content = json_decode(file_get_contents($file), false);
       $introtekst = $content->stadIntroTekst;
 
+      return view('pages.city', compact('introtekst', 'locations'));
+    }
+
+    function getScore() {
       $scores = Score::all();
       foreach($scores as $userscore) {
         $userscore->totalscore = $userscore->scoreStacker + $userscore->scoreFrogger + $userscore->scoreFlappy + $userscore->scoreMaze;
@@ -32,7 +37,6 @@ class PageController extends Controller
       $scores = array_reverse($scores);
       $scores = array_slice($scores, 0, 5);
       return $scores;
-
-      return view('pages.city', compact('introtekst', 'locations'));
+      return Response::json($scores);
     }
 }
