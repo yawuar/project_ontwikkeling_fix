@@ -750,6 +750,16 @@ footer {
 #game {
   margin-bottom: 100px;
   .container {
+    .play {
+      position: absolute;
+      display: block;
+      background-image: url('../images/google_play.png');
+      background-repeat: no-repeat;
+      background-size: contain;
+      width: 180px;
+      height: 70px;
+      bottom: 0;
+    }
     position: relative;
     padding: 0;
     .scoreBoard {

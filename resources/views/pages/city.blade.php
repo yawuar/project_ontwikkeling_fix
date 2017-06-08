@@ -26,6 +26,7 @@
 
   <section id="game">
     <div class="container">
+      <a href="#" class="play"></a>
       <div class="scoreBoard">
         <div class="head">Scoreboard</div>
         <div class="item">
