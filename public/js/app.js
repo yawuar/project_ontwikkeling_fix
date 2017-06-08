@@ -84,6 +84,7 @@
 
   function activateHeart(e) {
     var url, removeClass, addClass, isActivateHeart;
+    console.log(window.location.href + '/heart/session/' + e.target.classList[1]);
     if($(e.target).hasClass('heart')) {
       url = window.location.href + '/heart/session/' + e.target.classList[1];
       removeClass = 'heart';
